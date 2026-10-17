@@ -11,9 +11,8 @@
 	<canvas id="neon-grid"></canvas>
 	
 	<!-- LOGIN SECTION -->
-	<div id="login-container" class="login_panel">
-		<!-- <h2 class="streamer-title">kiho_85 - STREAM ARCADE</h2> -->
-		<!-- Hub Branding Header -->
+    <div id="login-container" class="login_panel">
+        <!-- Hub Branding Header -->
         <div class="streamer-profile">
             <div class="logo-placeholder">🕹️</div>
             <div class="streamer-info">
@@ -23,23 +22,31 @@
                 <span class="streamer-subtitle">Twitch Mini-games HUB</span>
             </div>
         </div>
-		
-		<h2 class="restricted-title">Restricted Access</h2>
+        
+		<h2 class="restricted-title">SYSTEM AUTHENTICATION</h2>
         <form id="login-form" style="width: 100%; margin: 0;">
-            <input type="text" id="username" placeholder="Username" required autocomplete="off">
-            <input type="password" id="password" placeholder="Password" required>
-            <input type="text" id="channel" placeholder="Twitch Channel (e.g.: kiho_85)" required autocomplete="off">
             
-			<!-- PERFORMANCE ECO MODE TOGGLE -->
+            <!-- Target Twitch channel input -->
+            <div class="input-field-wrapper">
+                <label for="channel" class="cyber-label">TARGET CHANNEL</label>
+                <input type="text" id="channel" placeholder="e.g.: kiho_85" required autocomplete="off">
+            </div>
+
+            <!-- Twitch OAuth Login Button with SVG Icon -->
+            <button type="button" id="twitch-login-btn" class="twitch-auth-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block; vertical-align:middle; margin-right:10px;"><path d="M11.571 4.714h1.714v5.143H11.57zm4.714 0H18v5.143h-1.714M6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.428l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                Accedi con Twitch
+            </button>
+            
+            <!-- PERFORMANCE ECO MODE TOGGLE -->
             <div class="eco-toggle-container">
                 <input type="checkbox" id="low-perf-mode" autocomplete="off">
                 <label for="low-perf-mode">Modalità Leggera (Eco Background)</label>
             </div>
 
-            <button type="submit">Accedi</button>
             <div id="error-msg" class="error"></div>
-        </form>       
-	</div>
+        </form>    
+    </div>
 	
     <!-- MAIN MENU SECTION -->
 	<div id="menu-container" class="card hidden">

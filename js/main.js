@@ -12,16 +12,17 @@ import { initSkribbl, stopSkribbl, processSkribblGuess } from './skribbl.js';
 import { initMemory, stopMemory, processMemoryGuess } from './memory.js';
 import { initTrueCrime, stopTrueCrime, processTrueCrimeAccusation } from './true_crime.js';
 
-import { initTwitchConnection, closeTwitchConnection } from './twitch-chat.js';
+import { initTwitchConnection, sendTwitchMessage, closeTwitchConnection } from './twitch-chat.js';
 import { initNeonGrid } from './neon-grid.js';
 
-const authorizedUsers = {
-    "kiho_85": "a",
-    "mod_anna": "modpass123",
-    "mod_marco": "modpass456"
-};
-
+// Twitch OAuth Configuration Constants
+const TWITCH_CLIENT_ID = 'tqmikr2euwby6qupjorrhe1e02cs2s';
+const TWITCH_REDIRECT_URI = window.location.hostname === 'localhost'
+    ? 'http://localhost:8000'
+    : 'https://asimovf.github.io/stream-arcade-hub/';
+const TWITCH_SCOPES = 'chat:read chat:edit';
 let TWITCH_CHANNEL = ""; 
+
 let activeGame = null;
 
 // DOM elements
@@ -32,6 +33,7 @@ const errorMsg = document.getElementById("error-msg");
 const chatFeed = document.getElementById("chat-feed");
 const placeholderContainer = document.getElementById("placeholder-container");
 const placeholderTitle = document.getElementById("placeholder-title");
+const twitchLoginBtn = document.getElementById("twitch-login-btn");
 
 // Game Containers
 const wordleContainer = document.getElementById("wordle-container");
@@ -82,47 +84,111 @@ const startMemoryBtn = document.getElementById("start-memory-btn");
 const memorySetup = document.getElementById("memory-setup");
 const memoryGameplay = document.getElementById("memory-gameplay");
 
-// Handle Login Form Submission
-loginForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const user = document.getElementById("username").value.trim();
-    const pass = document.getElementById("password").value;
-    const channelInput = document.getElementById("channel").value.trim().toLowerCase();
+// Handle Twitch OAuth Flow and Login Initialization
+async function initTwitchOAuth() {
+    const hash = window.location.hash;
+    let accessToken = sessionStorage.getItem('twitch_access_token');
+    let savedChannel = sessionStorage.getItem('twitch_channel');
+    let twitchUsername = sessionStorage.getItem('twitch_username');
 
-    if (!authorizedUsers[user] || authorizedUsers[user] !== pass) {
-        errorMsg.innerText = "Credenziali non valide!";
-        return;
+    // 1. Capture Access Token from URL hash after redirection from Twitch
+    if (hash && hash.includes('access_token')) {
+        const params = new URLSearchParams(hash.substring(1));
+        accessToken = params.get('access_token');
+        
+        if (accessToken) {
+            sessionStorage.setItem('twitch_access_token', accessToken);
+            window.history.replaceState(null, null, window.location.pathname);
+        }
     }
 
-    if (!channelInput) {
-        errorMsg.innerText = "Inserisci il nome del canale Twitch!";
-        return;
+    // 2. If token is present but username is missing, fetch real Twitch username via Helix API
+    if (accessToken && !twitchUsername) {
+        try {
+            const response = await fetch('https://api.twitch.tv/helix/users', {
+                headers: {
+                    'Client-ID': TWITCH_CLIENT_ID,
+                    'Authorization': `Bearer ${accessToken}`
+                }
+            });
+            if (response.ok) {
+                const data = await response.json();
+                if (data.data && data.data.length > 0) {
+                    twitchUsername = data.data[0].login.toLowerCase();
+                    sessionStorage.setItem('twitch_username', twitchUsername);
+                }
+            } else {
+                // Clear storage if token has expired or is invalid
+                sessionStorage.clear();
+                return;
+            }
+        } catch (error) {
+            console.error("Error retrieving Twitch username:", error);
+        }
     }
 
-    TWITCH_CHANNEL = channelInput;
+    // 3. If token, username, and target channel are available, unlock UI and start authenticated chat
+    if (accessToken && twitchUsername && savedChannel) {
+        TWITCH_CHANNEL = savedChannel;
+        
+        loginContainer.classList.add("hidden");
+        menuContainer.classList.remove("hidden");
+        
+        document.getElementById("menu-streamer-name").innerText = TWITCH_CHANNEL;
+        document.getElementById("menu-channel-name").innerText = `TWITCH CHANNEL: ${TWITCH_CHANNEL}`;
+        document.getElementById("menu-streamer-logo").innerText = TWITCH_CHANNEL.charAt(0).toUpperCase();
 
-    loginContainer.classList.add("hidden");
-    menuContainer.classList.remove("hidden");
-    
-    document.getElementById("menu-streamer-name").innerText = user;
-    document.getElementById("menu-channel-name").innerText = `TWITCH CHANNEL: ${TWITCH_CHANNEL}`;
-    document.getElementById("menu-streamer-logo").innerText = user.charAt(0).toUpperCase();
-    
-    initTwitchConnection(TWITCH_CHANNEL, handleGlobalChat);
-});
+        // Start authenticated IRC connection via OAuth with full read/write capabilities
+        console.log(`Starting authenticated IRC chat for ${twitchUsername} on channel ${TWITCH_CHANNEL}`);
+        initTwitchConnection(TWITCH_CHANNEL, twitchUsername, accessToken, handleGlobalChat);
+
+        // Send a stylized welcome message directly to the Twitch channel chat after connection settles
+        setTimeout(() => {
+            sendTwitchMessage(`[ ◢ ＳＴＲＥＡＭ - ＡＲＣＡＤＥ - ＨＵＢ ◣ ] ➔ Connessione stabilita con successo! Ciao chat, i mini-giochi interattivi sono ufficialmente ONLINE! 🚀✨`);
+        }, 2000);
+    }
+
+    // Core login action handler
+    const handleLoginAction = () => {
+        const channelInput = document.getElementById("channel").value.trim().toLowerCase();
+        
+        if (!channelInput) {
+            errorMsg.innerText = "Please enter a valid Twitch channel name!";
+            return;
+        }
+
+        // Save target channel before redirecting to Twitch
+        sessionStorage.setItem('twitch_channel', channelInput);
+
+        const authUrl = `https://id.twitch.tv/oauth2/authorize?client_id=${TWITCH_CLIENT_ID}&redirect_uri=${encodeURIComponent(TWITCH_REDIRECT_URI)}&response_type=token&scope=${encodeURIComponent(TWITCH_SCOPES)}`;
+        window.location.href = authUrl;
+    };
+
+    // 4. Bind submit event to login form to prevent default page refresh on Enter key
+    if (loginForm) {
+        loginForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            handleLoginAction();
+        });
+    }
+
+    // 5. Bind click event to Twitch login button to request authorization
+    if (twitchLoginBtn) {
+        twitchLoginBtn.addEventListener("click", () => {
+            handleLoginAction();
+        });
+    }
+}
 
 // Route incoming chat messages to active game
 function handleGlobalChat(username, text) {
     if (chatFeed) {
-        // Create a wrapper element for the new message
         const messageDiv = document.createElement('div');
         messageDiv.className = 'chat-message';
         messageDiv.innerHTML = `<b>${username}:</b> ${text}`;
         
-        // Prepend the new message to the top of the feed
         chatFeed.prepend(messageDiv);
         
-        // Limit the maximum number of messages to prevent DOM bloat and memory leaks
         const maxMessages = 50;
         while (chatFeed.children.length > maxMessages) {
             chatFeed.removeChild(chatFeed.lastChild);
@@ -167,7 +233,7 @@ function handleGlobalChat(username, text) {
         }
     }
 
-    if (activeGame === "memory" && text.toLowerCase().statsWith("!m ")) {
+    if (activeGame === "memory" && text.toLowerCase().startsWith("!m ")) {
         const guess = text.substring(3).trim();
         if (guess.length > 0) {
             processMemoryGuess(guess, username);
@@ -402,9 +468,12 @@ document.querySelectorAll(".back-btn, .back-to-menu-btn").forEach(btn => {
     });
 });
 
-// Logout Button Logic
+// Logout Button Logic (Clears Twitch session storage and resets state)
 document.getElementById("logout-btn").addEventListener("click", () => {
     closeTwitchConnection();
+    sessionStorage.removeItem('twitch_access_token');
+    sessionStorage.removeItem('twitch_channel');
+
     if (activeGame === "wordle") stopWordle();
     if (activeGame === "hangman") stopHangman();
     if (activeGame === "skribbl") stopSkribbl();
@@ -429,5 +498,6 @@ document.getElementById("logout-btn").addEventListener("click", () => {
     errorMsg.innerText = "";
 });
 
-// Initialize Neon Grid background animation on startup
+// Initialize Twitch OAuth state and Neon Grid background animation on startup
+initTwitchOAuth();
 initNeonGrid();
