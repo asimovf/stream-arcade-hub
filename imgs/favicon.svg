@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <!-- Filtro Glow Cyberpunk Morbido -->
+    <filter id="cyber-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+      <feMerge>
+        <feMergeNode in="coloredBlur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Gradiente Ciano / Magenta -->
+    <linearGradient id="cyanMagenta" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f3ff" />
+      <stop offset="100%" stop-color="#ff0055" />
+    </linearGradient>
+    
+    <!-- Gradiente Nucleo Centrale -->
+    <linearGradient id="neonPlasma" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#00f3ff" />
+      <stop offset="100%" stop-color="#8e75ff" />
+    </linearGradient>
+  </defs>
+
+  <!-- Sfondo scuro pulito con angoli arrotondati (Zero bordi pesanti) -->
+  <rect width="200" height="200" rx="46" fill="#030712" />
+
+  <!-- CORE PRINCIPALE (Ingrandito e centrato per massima visibilità a 16x16px) -->
+  <g filter="url(#cyber-glow)">
+    <!-- Alone esterno sfumato -->
+    <path d="M 100 15 
+             C 100 65, 135 100, 185 100 
+             C 135 100, 100 135, 100 185 
+             C 100 135, 65 100, 15 100 
+             C 65 100, 100 65, 100 15 Z" fill="url(#cyanMagenta)" opacity="0.35" />
+          
+    <!-- Stella centrale principale -->
+    <path d="M 100 28 
+             C 100 70, 130 100, 172 100 
+             C 130 100, 100 130, 100 172 
+             C 100 130, 70 100, 28 100 
+             C 70 100, 100 70, 100 28 Z" fill="url(#neonPlasma)" />
+          
+    <!-- Nucleo di energia puro -->
+    <circle cx="100" cy="100" r="8" fill="#ffffff" filter="url(#cyber-glow)" />
+    <circle cx="100" cy="100" r="3" fill="#ff0055" />
+  </g>
+</svg>

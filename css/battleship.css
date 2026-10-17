@@ -1,0 +1,74 @@
+/* BATTLESHIP */
+
+/* Override standard card constraints for Battleship with the dynamic magenta-cyan pulse */
+#battleship-container:not(.hidden) {
+    width: 780px !important;
+    max-width: 95vw !important;
+    min-height: 600px !important;
+    background: rgba(8, 12, 22, 0.5) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding: 30px 45px !important;
+    gap: 16px !important;
+    margin: 0 auto !important;
+    animation: wordleNeonPulse 4s ease-in-out infinite !important;
+    box-sizing: border-box !important;
+}
+
+/* Battleship main title styling */
+#battleship-container h2 {
+    font-size: 1.8em !important;
+    letter-spacing: 2px !important;
+    margin: 0 0 5px 0 !important;
+    color: #00f3ff !important;
+    text-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+}
+
+/* Setup screen layout */
+#battleship-setup:not(.hidden) {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    padding: 30px 0 !important;
+}
+
+.bs-setup-group {
+    margin: 15px 0;
+}
+
+.bs-input-num {
+    width: 80px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* Active gameplay screen layout */
+#battleship-gameplay:not(.hidden) {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+}
+
+/* Rigid 7x7 Battleship Grid Board */
+.bs-grid-board {
+    display: grid !important;
+    grid-template-columns: repeat(7, 50px) !important;
+    grid-template-rows: repeat(7, 50px) !important;
+    gap: 6px !important;
+    margin: 10px auto !important;
+    justify-content: center !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+}
+
+.bs-action-btn {
+    width: 100% !important;
+    margin-top: 5px !important;
+}

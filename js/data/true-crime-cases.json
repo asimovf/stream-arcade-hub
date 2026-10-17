@@ -1,0 +1,73 @@
+{
+  "locations": [
+    { "name": "Laboratorio di Fisica Quantistica", "context": "tra i rack dei server di calcolo ad alte prestazioni" },
+    { "name": "Sala Ciclotrone", "context": "accanto al pannello di controllo dell'acceleratore di particelle" },
+    { "name": "Archivio Storico Sotterraneo", "context": "fra gli scaffali compatti di documenti riservati" },
+    { "name": "Officina Meccanica di Precisione", "context": "vicino al banco di lavoro per micro-saldature" },
+    { "name": "Osservatorio Astronomico della Cupola Nord", "context": "sotto la sala di controllo della montatura telematica" },
+    { "name": "Laboratorio di Chimica Avanzata", "context": "nei pressi delle cappe di aspirazione e dei reattori" }
+  ],
+  "first_names": ["Marco", "Elena", "Luca", "Sara", "Davide", "Giulia", "Andrea", "Chiara", "Matteo", "Valentina", "Simone", "Federica"],
+  "last_names": ["Rossi", "Neri", "Valli", "Belli", "Moretti", "Conti", "Rinaldi", "Gallo", "Ferrari", "Romano", "Costa", "Bianchi"],
+  "victim_roles": [
+    { "role": "Direttore di Laboratorio" },
+    { "role": "Capo Progetto Senior" },
+    { "role": "Consulente Esterno" },
+    { "role": "Responsabile della Sicurezza IT" }
+  ],
+  "suspect_roles": [
+    { 
+      "role": "Fisico Teorico", 
+      "default_alibi": "Ero in sala relax a calcolare equazioni alla lavagna.",
+      "associated_material": "polvere di gesso e grafite",
+      "associated_tool": "calibro di precisione"
+    },
+    { 
+      "role": "Sistemista di Rete", 
+      "default_alibi": "Lavoravo da remoto sui log di backup dei server.",
+      "associated_material": "residui di stagno per saldature",
+      "associated_tool": "chiavetta USB di diagnostica"
+    },
+    { 
+      "role": "Tecnico di Manutenzione", 
+      "default_alibi": "Stavo riparando l'impianto di aerazione al piano terra.",
+      "associated_material": "grasso industriale per ingranaggi",
+      "associated_tool": "cacciavite isolato"
+    },
+    { 
+      "role": "Dottoranda di Ricerca", 
+      "default_alibi": "Dormivo nella foresteria del dipartimento.",
+      "associated_material": "fibra sintetica del camice",
+      "associated_tool": "penna stilo ottica"
+    },
+    { 
+      "role": "Addetto alla Logistica", 
+      "default_alibi": "Spostavo i nuovi carichi di componenti elettronici nel deposito.",
+      "associated_material": "residui di cartone pressato e nastro adesivo",
+      "associated_tool": "taglierino multiuso"
+    },
+    { 
+      "role": "Consulente di Sicurezza Fisica", 
+      "default_alibi": "Effettuavo il controllo dei varchi perimetrali esterni.",
+      "associated_material": "micro-particelle di polvere da sparo o innesco",
+      "associated_tool": "torcia tattica a LED"
+    }
+  ],
+  "evidence_templates": {
+    "material_traces": [
+      "Tracce di {material} rinvenute sui guanti protettivi della vittima.",
+      "Frammenti di {material} trovati intrappolati nella maniglia della porta blindata.",
+      "Una macchia microscopica di {material} individuata sulla tastiera del terminale."
+    ],
+    "digital_logs": [
+      "Il registro elettronico mostra un accesso anomalo con badge alle {time}, rilasciando residui di {material}.",
+      "Un comando di override del sistema di sicurezza eseguito alle {time} compatibile con l'uso di {tool}.",
+      "Il log della telecamera secondaria registra il passaggio di una figura con tracce di {material} alle {time}."
+    ],
+    "physical_objects": [
+      "Un {tool} dimenticato sotto la scrivania, recante tracce inconfondibili di {material}.",
+      "Un registro cartaceo aperto alla pagina delle {time} macchiato con {material}.",
+      "Un componente hardware forzato con un {tool} e sporco di {material}."
+    ]
+  }
+}

@@ -1,0 +1,217 @@
+/* MENU */
+#menu-container {
+    position: relative !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    isolation: isolate !important;
+    width: 980px !important;
+    max-width: 98vw !important;
+    text-align: left !important;
+    padding: 30px !important;
+    box-sizing: border-box !important;
+    border-radius: 0 !important;
+    clip-path: none !important;
+    animation: none !important;
+}
+
+#menu-container::before,
+#menu-container::after {
+    content: none !important;
+    display: none !important;
+}
+
+.game-grid {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 12px !important;
+    margin-top: 20px !important;
+}
+
+.game-card {
+    position: relative !important;
+    overflow: hidden !important;
+    background: rgba(15, 23, 42, 0.65) !important;
+    padding: 26px 10px 16px 10px !important; /* Padding in alto aumentato per fare spazio al numero */
+    border: 2px solid rgba(0, 243, 255, 0.4) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 8px !important;
+    cursor: pointer !important;
+    border-radius: 3px !important;
+    font-family: 'Rajdhani', sans-serif !important;
+    font-size: 1.2em !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    color: #e2e8f0 !important;
+    min-height: 175px !important;
+    box-shadow: inset 0 0 10px rgba(0, 243, 255, 0.03) !important;
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-sizing: border-box !important;
+}
+
+.game-card .game-num {
+    position: absolute !important;
+    top: 8px !important;
+    left: 8px !important;
+    font-size: 0.85em !important;
+    font-weight: 700 !important;
+    color: #00f3ff !important;
+    background: rgba(0, 243, 255, 0.1) !important;
+    padding: 2px 6px !important;
+    border-radius: 2px !important;
+    border: 1px solid rgba(0, 243, 255, 0.3) !important;
+}
+
+.game-card:hover {
+    border-color: #00f3ff !important;
+    background: rgba(0, 243, 255, 0.12) !important;
+    color: #00f3ff !important;
+    box-shadow: 0 6px 20px rgba(0, 243, 255, 0.3), inset 0 0 15px rgba(0, 243, 255, 0.15) !important;
+    transform: translateY(-2px) scale(1.02) !important;
+}
+
+.game-card::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(90deg, transparent, rgba(0, 243, 255, 0.2), transparent) !important;
+    transition: none !important;
+    display: block !important;
+    z-index: 1 !important;
+}
+
+.game-card:hover::before {
+    left: 100% !important;
+    transition: 0.4s ease-in-out !important;
+}
+
+.game-card:active {
+    transform: translateY(1px) scale(0.98) !important;
+    box-shadow: 0 2px 8px rgba(0, 243, 255, 0.4), inset 0 0 10px rgba(0, 243, 255, 0.3) !important;
+}
+
+.game-card .game-icon {
+    width: 32px !important;
+    height: 32px !important;
+    object-fit: contain !important;
+    margin-top: 2px !important;
+    filter: drop-shadow(0 0 4px rgba(0, 243, 255, 0.3)) !important;
+    transition: transform 0.15s ease !important;
+}
+
+.game-card:hover .game-icon {
+    transform: scale(1.1) !important;
+    filter: drop-shadow(0 0 8px rgba(0, 243, 255, 0.6)) !important;
+}
+
+/* Brand/Streamer Box */
+/* =========================================
+   STREAMER PROFILE TRIPLE-COLOR HUD FIX
+   ========================================= */
+
+.menu-streamer-box {
+    text-align: left !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+}
+
+/* Main streamer name in Cyber White */
+.menu-streamer-name {
+    margin: 0 !important;
+    font-size: 1.35em !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    line-height: 1.2 !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Twitch channel line in Cyber Magenta */
+.menu-streamer-channel {
+    font-family: 'Share Tech Mono', monospace !important;
+    color: #ff70b5 !important;
+    font-size: 0.95em !important;
+    letter-spacing: 1px !important;
+    margin: 0 !important;
+    display: block !important;
+    line-height: 1.2 !important;
+    text-shadow: 0 0 8px rgba(255, 0, 127, 0.4) !important;
+}
+
+/* Hub subtitle line in Cyber Cyan */
+.menu-streamer-subtitle {
+    margin: 0 !important;
+    color: #00f3ff !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    font-size: 0.85em !important;
+    letter-spacing: 1.5px !important;
+    line-height: 1.2 !important;
+    text-shadow: 0 0 8px rgba(0, 243, 255, 0.4) !important;
+}
+
+
+.menu-streamer-profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(3, 7, 18, 0.5);
+    padding: 16px 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 1px solid #00f3ff;
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.25);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu-logo-placeholder {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, #7c3aed, #9146FF);
+    color: white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4em;
+    flex-shrink: 0;
+    border: 1px solid #00f3ff;
+}
+
+.select-game {
+    align-self: stretch !important;
+    text-align: center !important;
+    margin-top: 5px !important;
+    margin-bottom: 1px !important;
+    font-size: 1.4em !important;
+    font-weight: 700 !important;
+    color: #ff8800 !important;
+    background: linear-gradient(180deg, #ffa533, #ff6600) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    text-shadow: 0 0 15px rgba(255, 136, 0, 0.8), 0 0 30px rgba(255, 136, 0, 0.4) !important;
+    letter-spacing: 3px !important;
+    text-transform: uppercase !important;
+    animation: selectPulse 5s infinite ease-in-out !important;
+}
+
+@keyframes selectPulse {
+    0%, 100% {
+		transform: scale(1);
+        text-shadow: 0 0 10px rgba(255, 136, 0, 0.6), 0 0 20px rgba(255, 136, 0, 0.3) !important;
+        opacity: 0.8 !important;
+    }
+    50% {
+		transform: scale(1.05);
+        text-shadow: 0 0 25px rgba(255, 136, 0, 1), 0 0 50px rgba(255, 136, 0, 0.7) !important;
+        opacity: 1 !important;
+    }
+} 

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Stream Arcade Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="icon" type="image/svg+xml" href="imgs/favicon.svg">
+</head>
+<body>
+
+	<canvas id="neon-grid"></canvas>
+	
+	<!-- LOGIN SECTION -->
+	<div id="login-container" class="login_panel">
+		<!-- <h2 class="streamer-title">kiho_85 - STREAM ARCADE</h2> -->
+		<!-- Hub Branding Header -->
+        <div class="streamer-profile">
+            <div class="logo-placeholder">🕹️</div>
+            <div class="streamer-info">
+                <h2 class="streamer-title">
+                    <img src="imgs/favicon.svg" alt="Logo" class="title-logo"> STREAM ARCADE
+                </h2>
+                <span class="streamer-subtitle">Twitch Mini-games HUB</span>
+            </div>
+        </div>
+		
+		<h2 class="restricted-title">Restricted Access</h2>
+        <form id="login-form" style="width: 100%; margin: 0;">
+            <input type="text" id="username" placeholder="Username" required autocomplete="off">
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="text" id="channel" placeholder="Twitch Channel (e.g.: kiho_85)" required autocomplete="off">
+            
+			<!-- PERFORMANCE ECO MODE TOGGLE -->
+            <div class="eco-toggle-container">
+                <input type="checkbox" id="low-perf-mode" autocomplete="off">
+                <label for="low-perf-mode">Modalità Leggera (Eco Background)</label>
+            </div>
+
+            <button type="submit">Accedi</button>
+            <div id="error-msg" class="error"></div>
+        </form>       
+	</div>
+	
+    <!-- MAIN MENU SECTION -->
+	<div id="menu-container" class="card hidden">
+		<!-- Streamer Branding Header -->
+		<div class="menu-streamer-profile">
+			<div id="menu-streamer-logo" class="menu-logo-placeholder">📺</div>
+			<div class="menu-streamer-box">
+				<h2 id="menu-streamer-name" class="menu-streamer-name">Nome Streamer</h2>
+				<span id="menu-channel-name" class="menu-streamer-channel">TWITCH CHANNEL: --</span>
+				<span class="menu-streamer-subtitle">Stream Arcade Hub</span>
+			</div>
+		</div>		
+		
+        <p class="select-game">Seleziona il minigioco per la chat:</p>
+		<div class="game-grid">
+            <div class="game-card" data-game="wordle">
+                <span class="game-num">01</span>
+                <span class="game-title">Wordle della Chat</span>
+                <img src="./js/data/icons/wordle.png" alt="Wordle" class="game-icon">
+            </div>
+            <div class="game-card" data-game="hangman">
+                <span class="game-num">02</span>
+                <span class="game-title">L'Impiccato</span>
+                <img src="./js/data/icons/hangman.png" alt="L'Impiccato" class="game-icon">
+            </div>
+            <div class="game-card" data-game="nerd">
+                <span class="game-num">03</span>
+                <span class="game-title">Nerd & Physics Lab</span>
+                <img src="./js/data/icons/nerd.png" alt="Nerd Lab" class="game-icon">
+            </div>
+            <div class="game-card" data-game="skribbl">
+                <span class="game-num">04</span>
+                <span class="game-title">Mini-Skribbl</span>
+                <img src="./js/data/icons/skribbl.png" alt="Skribbl" class="game-icon">
+            </div>
+            <div class="game-card" data-game="scramble">
+                <span class="game-num">05</span>
+                <span class="game-title">Anagramma Rapido</span>
+                <img src="./js/data/icons/scramble.png" alt="Anagramma" class="game-icon">
+            </div>
+            <div class="game-card" data-game="memory">
+                <span class="game-num">06</span>
+                <span class="game-title">Memory Grid</span>
+                <img src="./js/data/icons/memory.png" alt="Memory" class="game-icon">
+            </div>
+            <div class="game-card" data-game="quiz">
+                <span class="game-num">07</span>
+                <span class="game-title">Quiz a Tema</span>
+                <img src="./js/data/icons/quiz.png" alt="Quiz" class="game-icon">
+            </div>        
+            <div class="game-card" data-game="battleship">
+                <span class="game-num">08</span>
+                <span class="game-title">Battaglia Navale</span>
+                <img src="./js/data/icons/battleship.png" alt="Battaglia Navale" class="game-icon">
+            </div>        
+            <div class="game-card" data-game="truecrime">
+                <span class="game-num">09</span>
+                <span class="game-title">True Crime Lab</span>
+                <img src="./js/data/icons/truecrime.png" alt="True Crime" class="game-icon">
+            </div>
+            <div class="game-card" data-game="sentence">
+                <span class="game-num">10</span>
+                <span class="game-title">Completa la frase</span>
+                <img src="./js/data/icons/sentence.png" alt="Completa la frase" class="game-icon">
+            </div>
+        </div>		
+        <br>
+		<!-- <div style="text-align: center; margin-top: 25px;"> -->
+		<div style="text-align: center;">
+            <button id="logout-btn" class="secondary-btn">LOGOUT</button>
+        </div>
+    </div>
+
+	<!-- X 01. WORDLE GAME SECTION -->
+	<div id="wordle-container" class="card hidden">
+		<h2>Wordle della Chat</h2>
+		
+		<!-- Setup Screen -->
+		<div id="wordle-setup">
+			<p>Configura la sessione di gioco:</p>
+			<div style="margin: 15px 0;">
+				<label for="rounds-input">Numero di Manche:</label><br>
+				<input type="number" id="rounds-input" value="5" min="1" max="10" style="width: 80px; text-align: center; font-size: 1.2em;">
+			</div>
+			<button id="start-wordle-btn">Avvia Partita</button>
+			<br><br>
+			<button class="back-btn secondary-btn">Torna al Menu</button>
+		</div>
+
+		<!-- Gameplay Screen -->
+		<div id="wordle-gameplay" class="hidden">
+			<!-- Top HUD Info Bar -->
+			<div class="wordle-header-info">
+				<span id="round-info">Manche 1/5</span>
+				<span id="row-info">Riga 1/6</span>
+				<span id="timer-badge" class="timer-badge">⏱ 15s</span>
+			</div>
+			
+			<div class="wordle-grid" id="grid"></div>
+
+			<!-- Votes & Status Box -->
+			<div id="wordle-status" class="wordle-status-box">In attesa di proposte (!w [parola])...</div>
+
+			<!-- Streamer manual control button for next round -->
+			<button id="next-round-btn" class="secondary-btn hidden" style="width: 100%; margin-top: 5px;">▶ PROSSIMA MANCHE</button>
+
+			<div id="chat-feed">Ultimi tentativi chat in ascolto...</div>
+			<br>
+			<button class="back-btn secondary-btn">Torna al Menu</button>
+		</div>
+	</div>
+
+	<!-- X 02. HANGMAN GAME SECTION -->
+	<div id="hangman-container" class="card hidden">
+		<h2>L'Impiccato della Chat</h2>
+		
+		<!-- Setup Screen -->
+		<div id="hangman-setup">
+			<p>Configura la sessione di gioco:</p>
+			<div style="margin: 15px 0;">
+				<label for="hangman-rounds-input">Numero di Parole:</label><br>
+				<input type="number" id="hangman-rounds-input" value="3" min="1" max="5" style="width: 80px; text-align: center; font-size: 1.2em;">
+			</div>
+			<button id="start-hangman-btn">Avvia Partita</button>
+			<br><br>
+			<button class="back-btn secondary-btn">Torna al Menu</button>
+		</div>
+
+		<!-- Gameplay Screen -->
+		<div id="hangman-gameplay" class="hidden">
+			<!-- Top HUD Info Bar -->
+			<div class="wordle-header-info">
+				<span id="hangman-round-info">Parola 1/3</span>
+				<span id="hangman-errors-info">Errori: 0/6</span>
+				<span id="hangman-timer-badge" class="timer-badge">⏱ 12s</span>
+			</div>
+			
+			<!-- SVG Hangman Drawing -->
+			<div class="hangman-drawing-container">
+				<svg height="150" width="150" viewBox="0 0 150 150">
+					<!-- Base & Gallows -->
+					<line x1="20" y1="140" x2="100" y2="140" stroke="#00f3ff" stroke-width="4" opacity="0.6" />
+					<line x1="40" y1="20" x2="40" y2="140" stroke="#00f3ff" stroke-width="4" opacity="0.6" />
+					<line x1="40" y1="20" x2="100" y2="20" stroke="#00f3ff" stroke-width="4" opacity="0.6" />
+					<line x1="100" y1="20" x2="100" y2="40" stroke="#00f3ff" stroke-width="4" opacity="0.6" />
+					
+					<!-- Hangman Parts (Hidden by default via CSS/JS) -->
+					<circle id="part-head" class="hangman-part hidden" cx="100" cy="55" r="12" stroke="#ff007f" stroke-width="4" fill="none" style="filter: drop-shadow(0 0 6px rgba(255,0,127,0.7));" />
+					<line id="part-body" class="hangman-part hidden" x1="100" y1="67" x2="100" y2="100" stroke="#ff007f" stroke-width="4" style="filter: drop-shadow(0 0 6px rgba(255,0,127,0.7));" />
+					<line id="part-arm-left" class="hangman-part hidden" x1="100" y1="75" x2="80" y2="90" stroke="#ff007f" stroke-width="4" style="filter: drop-shadow(0 0 6px rgba(255,0,127,0.7));" />
+					<line id="part-arm-right" class="hangman-part hidden" x1="100" y1="75" x2="120" y2="90" stroke="#ff007f" stroke-width="4" style="filter: drop-shadow(0 0 6px rgba(255,0,127,0.7));" />
+					<line id="part-leg-left" class="hangman-part hidden" x1="100" y1="100" x2="85" y2="125" stroke="#ff007f" stroke-width="4" style="filter: drop-shadow(0 0 6px rgba(255,0,127,0.7));" />
+					<line id="part-leg-right" class="hangman-part hidden" x1="100" y1="100" x2="115" y2="125" stroke="#ff007f" stroke-width="4" style="filter: drop-shadow(0 0 6px rgba(255,0,127,0.7));" />
+				</svg>
+			</div>
+
+			<!-- Word Display -->
+			<div id="hangman-word-display" class="hangman-word">_ _ _ _ _</div>
+
+			<!-- Used Letters -->
+			<div style="margin: 2px 0; font-family: 'Share Tech Mono', monospace; font-size: 0.95em; color: #94a3b8; letter-spacing: 1px;">
+				Lettere provate: <span id="hangman-used-letters" style="color: #00f3ff; font-weight: bold; text-shadow: 0 0 8px rgba(0,243,255,0.4);">Nessuna</span>
+			</div>
+
+			<!-- Status Box / Votes -->
+			<div id="hangman-status" class="wordle-status-box">Scrivi in chat !h [lettera] per votare!</div>
+
+			<!-- Streamer manual control button for next word -->
+			<button id="hangman-next-btn" class="secondary-btn hidden" style="width: 100%; margin-top: 5px;">▶ PROSSIMA PAROLA</button>
+
+			<div id="hangman-chat-feed">In attesa di tentativi...</div>
+			<br>
+			<button class="back-btn secondary-btn">Torna al Menu</button>
+		</div>
+	</div>
+
+	<!-- X 03. NERD & PHYSYCS LAB GAME SECTION -->
+    <div id="nerd-container" class="card hidden">
+        <h2>Nerd & Physics Lab</h2>
+        
+        <!-- Setup Screen -->
+        <div id="nerd-setup">
+            <p>Configura la sessione:</p>
+            <div class="nerd-setup-group">
+                <label for="nerd-rounds-input">Numero di Domande:</label><br>
+                <input type="number" id="nerd-rounds-input" value="5" min="1" max="10" class="nerd-input-num">
+            </div>
+            <button id="start-nerd-btn">Avvia Partita</button>
+            <br><br>
+            <button class="back-btn secondary-btn">Torna al Menu</button>
+        </div>
+
+        <!-- Gameplay Screen -->
+        <div id="nerd-gameplay" class="hidden">
+            <!-- Top HUD Info Bar (3-column grid layout) -->
+            <div class="wordle-header-info">
+                <span id="nerd-round-info">Domanda 1/5</span>
+                <span id="nerd-category-info">PHYSICS LAB</span>
+                <span id="nerd-timer-badge" class="timer-badge">⏱ 25s</span>
+            </div>
+            
+            <div class="nerd-question-wrapper">
+                <span class="nerd-label-title">DOMANDA:</span>
+                <div id="nerd-question-display" class="nerd-question-text">Caricamento...</div>
+
+                <!-- Word length and letter mask display -->
+                <div id="nerd-length-display" class="nerd-length-mask"></div>
+                
+                <!-- Hint display container -->
+                <div id="nerd-hint-display" class="nerd-hint-text"></div>
+                
+                <!-- Permanent command hint for viewers -->
+                <div class="nerd-command-box">
+                    💡 Scrivi in chat: <b>!n [tua risposta]</b>
+                </div>
+            </div>
+
+            <!-- Status Box / Votes -->
+            <div id="nerd-status" class="wordle-status-box">In attesa della prima risposta in chat...</div>
+
+            <!-- Streamer manual control button for next question -->
+            <button id="nerd-next-btn" class="secondary-btn hidden nerd-action-btn">▶ PROSSIMA DOMANDA</button>
+
+            <div id="nerd-chat-feed" class="nerd-chat-feed-box">In ascolto di risposte per la domanda 1...</div>
+            <br>
+            <button class="back-btn secondary-btn">Torna al Menu</button>
+        </div>
+    </div>
+	
+	<!-- X 04. SKRIBBL GAME SECTION -->
+    <div id="skribbl-container" class="card hidden">
+        <h2>Skribbl della Chat</h2>
+        
+        <!-- Initial Setup -->
+        <div id="skribbl-setup">
+            <p style="color: #ff70b5; font-family: 'Share Tech Mono', monospace; font-size: 1.05em; letter-spacing: 1.2px; margin-bottom: 10px; text-shadow: 0 0 8px rgba(255, 0, 127, 0.4);">CONFIGURA LA SESSIONE DI DISEGNO:</p>
+            <div style="margin: 10px 0; text-align: center;">
+                <label style="color: #00f3ff; font-family: 'Share Tech Mono', monospace; display: block; margin-bottom: 8px;">Numero di Manche:</label>
+                <input type="number" id="skribbl-rounds-input" value="3" min="1" max="10" style="width: 80px; text-align: center; font-size: 1.2em;">
+            </div>
+            <button id="start-skribbl-btn" class="skribbl-setup-btn">Avvia Disegno</button>
+            <br>
+            <button class="back-to-menu-btn secondary-btn skribbl-setup-btn" style="margin-top: 10px;">Torna al Menu</button>
+        </div>
+
+        <!-- Gameplay Area -->
+        <div id="skribbl-gameplay" class="hidden">
+            <!-- Top HUD Info Bar (3-column grid layout) -->
+            <div class="wordle-header-info">
+                <span id="skribbl-round-info">Manche 1/3</span>
+                <span id="skribbl-category-info">SKRIBBL</span>
+                <span id="skribbl-timer-badge" class="timer-badge">⏱ 45s</span>
+            </div>
+
+            <!-- Canvas and Toolbar -->
+            <div class="skribbl-canvas-wrapper">
+                <canvas id="skribbl-canvas"></canvas>
+                <!-- Advanced Skribbl Toolbar -->
+                <div class="skribbl-toolbar">
+                    <!-- Quick color palette + Custom Color Picker with icon wrapper -->
+                    <div class="tool-group">
+                        <button class="swatch active" data-color="#000000" style="background: #000000;"></button>
+                        <button class="swatch" data-color="#ff4757" style="background: #ff4757;"></button>
+                        <button class="swatch" data-color="#2ed573" style="background: #2ed573;"></button>
+                        <button class="swatch" data-color="#1e90ff" style="background: #1e90ff;"></button>
+                        <button class="swatch" data-color="#ffa502" style="background: #ffa502;"></button>
+                        <button class="swatch" data-color="#9b59b6" style="background: #9b59b6;"></button>
+                        <div class="color-picker-wrapper" title="Colore Personalizzato">
+                            <span style="font-size: 12px; pointer-events: none;">🎨</span>
+                            <input type="color" id="skribbl-color-picker" value="#000000">
+                        </div>
+                    </div>
+
+                    <!-- Stroke widths -->
+                    <div class="tool-group">
+                        <button class="size-btn active" data-size="3">Fine</button>
+                        <button class="size-btn" data-size="8">Medio</button>
+                        <button class="size-btn" data-size="18">Spesso</button>
+                    </div>
+
+                    <!-- Tools (Eraser and Clear) with identical widths -->
+                    <div class="tool-group">
+                        <button id="skribbl-eraser-btn" class="secondary-btn tool-action-btn">Gomma</button>
+                        <button id="skribbl-clear-btn" class="secondary-btn tool-action-btn">Pulisci</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="skribbl-status" class="wordle-status-box">In attesa...</div>
+            
+            <!-- Streamer manual control button for next round (Visible immediately without scrolling) -->
+            <button id="skribbl-next-btn" class="secondary-btn hidden skribbl-action-btn">▶ PROSSIMA MANCHE</button>
+
+            <!-- Clearly visible chat feed -->
+            <div id="skribbl-chat-feed" class="skribbl-chat-feed-box">In ascolto di tentativi dalla chat...</div>
+
+            <!-- Back to menu button positioned right after the chat feed -->
+            <button class="back-to-menu-btn secondary-btn" style="width: 100%; margin-top: 5px;">Torna al Menu</button>
+
+            <!-- STREAMER RESERVED AREA (Secret Word Box pushed way down safely below OBS crop fold) -->
+            <div class="skribbl-word-box">
+                <span style="font-size: 0.75em; color: #d0bfff; display: block; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 1px;">🔒 Streamer Reserved Area (Secret Word)</span>
+                <div id="skribbl-word-display" style="margin: 0; display: inline-block; color: #fff;">Parola segreta...</div>
+            </div>
+        </div>
+    </div>
+	
+	<!-- X 05. SCRAMBLE GAME SECTION -->
+    <div id="scramble-container" class="card hidden">
+        <h2>Anagramma Rapido</h2>
+        
+        <!-- Setup Screen -->
+        <div id="scramble-setup">
+            <p>Configura la sessione:</p>
+            <div class="scramble-setup-group">
+                <label for="scramble-rounds-input">Numero di Manche:</label><br>
+                <input type="number" id="scramble-rounds-input" value="5" min="1" max="10" class="scramble-input-num">
+            </div>
+            <button id="start-scramble-btn">Avvia Partita</button>
+            <br><br>
+            <button class="back-btn secondary-btn">Torna al Menu</button>
+        </div>
+
+        <!-- Gameplay Screen -->
+        <div id="scramble-gameplay" class="hidden">
+            <!-- Top HUD Info Bar (3-column grid layout) -->
+            <div class="wordle-header-info">
+                <span id="scramble-round-info">Manche 1/5</span>
+                <span id="scramble-category-info">SCRAMBLE</span>
+                <span id="scramble-timer-badge" class="timer-badge">⏱ 30s</span>
+            </div>
+            
+            <div class="scramble-word-wrapper">
+                <span class="scramble-label-title">PAROLA MESCOLATA:</span>
+                <div id="scramble-word-display" class="scramble-word-text">_ _ _ _ _</div>
+
+                <!-- Permanent command hint for viewers -->
+                <div class="scramble-command-box">
+                    💡 Scrivi in chat: <b class="scramble-cmd-highlight">!a [parola]</b> per indovinare per primo!
+                </div>
+            </div>
+
+            <!-- Status Box / Votes -->
+            <div id="scramble-status" class="wordle-status-box">In attesa di tentativi in chat...</div>
+
+            <!-- Streamer manual control button for next round -->
+            <button id="scramble-next-btn" class="secondary-btn hidden scramble-action-btn">▶ PROSSIMA MANCHE</button>
+
+            <div id="scramble-chat-feed" class="scramble-chat-feed-box">Ultimi tentativi in ascolto...</div>
+            <br>
+            <button class="back-btn secondary-btn">Torna al Menu</button>
+        </div>
+    </div>
+	
+	<!-- X 06. MEMORY GRID GAME SECTION -->
+    <div id="memory-container" class="card hidden">
+        <h2>Memory Grid della Chat</h2>
+        
+        <!-- Setup Screen -->
+        <div id="memory-setup">
+            <p class="memory-setup-subtitle">MEMORIZZA LA GRIGLIA 4X4 E GUIDA LA CHAT A TROVARE LE COPPIE!</p>
+            <button id="start-memory-btn" class="memory-action-btn">Avvia Partita</button>
+            <br><br>
+            <button class="back-btn secondary-btn">Torna al Menu</button>
+        </div>
+
+        <!-- Gameplay Screen -->
+        <div id="memory-gameplay" class="hidden">
+            <!-- Top HUD Info Bar (3-column grid layout) -->
+            <div class="wordle-header-info">
+                <span id="memory-progress-info">Coppia 1/8</span>
+                <span id="memory-category-info">MEMORY LAB</span>
+                <span id="memory-timer-badge" class="timer-badge">⏱ 15s</span>
+            </div>
+            
+            <div class="memory-content-wrapper">
+                <!-- Target Prompt Display -->
+                <div id="memory-target-display" class="memory-target-text">Memorizza la griglia...</div>
+                
+                <!-- 4x4 Grid Board -->
+                <div id="memory-grid" class="memory-board-grid"></div>
+                
+                <!-- Permanent command hint -->
+                <div class="memory-command-box">
+                    💡 Scrivi in chat: <b class="memory-cmd-highlight">!m [coordinate es. A2]</b>
+                </div>
+            </div>
+
+            <div id="memory-status" class="wordle-status-box">In attesa delle coordinate della chat...</div>
+
+            <div id="memory-chat-feed" class="memory-chat-feed-box">In ascolto di tentativi...</div>
+            <br>
+            <button class="back-btn secondary-btn">Torna al Menu</button>
+        </div>
+    </div>
+	
+	<!-- X 07. QUIZ / TRIVIA LAB GAME SECTION -->
+    <div id="quiz-container" class="card hidden">
+        <h2>🧠 Trivia Lab (Quiz a Tema)</h2>
+        
+		<!-- Setup Screen  -->
+        <div id="quiz-setup">
+            <p class="quiz-setup-subtitle">SELEZIONA LE CATEGORIE (SESSIONE DA 10 DOMANDE):</p>
+            
+            <div class="quiz-categories-grid">
+                <label class="quiz-category-label">
+                    <input type="checkbox" name="quiz-cat" value="cultura_generale" checked class="quiz-category-checkbox">
+                    Cultura Generale
+                </label>
+                <label class="quiz-category-label">
+                    <input type="checkbox" name="quiz-cat" value="storia" class="quiz-category-checkbox">
+                    Storia
+                </label>
+                <label class="quiz-category-label">
+                    <input type="checkbox" name="quiz-cat" value="scienza_natura" class="quiz-category-checkbox">
+                    Scienza e Natura
+                </label>
+                <label class="quiz-category-label">
+                    <input type="checkbox" name="quiz-cat" value="arte_letteratura" class="quiz-category-checkbox">
+                    Arte e Letteratura
+                </label>
+                <label class="quiz-category-label">
+                    <input type="checkbox" name="quiz-cat" value="sport_tempo_libero" class="quiz-category-checkbox">
+                    Sport e Tempo Libero
+                </label>
+                <label class="quiz-category-label">
+                    <input type="checkbox" name="quiz-cat" value="cinema_serie" class="quiz-category-checkbox">
+                    Cinema e Serie TV
+                </label>
+            </div>
+            
+            <button id="start-quiz-btn" style="width: 100%; padding: 12px; font-weight: bold; margin-bottom: 5px;">Avvia Partita</button>
+            <button class="back-btn secondary-btn" style="width: 100%;">Torna al Menu</button>
+        </div>
+
+        <!-- Gameplay Screen -->
+        <div id="quiz-gameplay" class="hidden">
+            <!-- Top HUD Info Bar (3-column grid layout) -->
+            <div class="wordle-header-info">
+                <span id="quiz-round-info">Domanda 1/10</span>
+                <span id="quiz-category-info">TRIVIA LAB</span>
+                <span id="quiz-timer-badge" class="timer-badge">⏱ 20s</span>
+            </div>
+            
+            <div class="quiz-content-wrapper">
+                <div id="quiz-text-display" class="quiz-question-text">Caricamento...</div>
+                
+                <div id="quiz-options-display" class="quiz-options-list"></div>
+                
+                <div id="quiz-hint-display" class="quiz-hint-text"></div>
+                
+                <div class="quiz-command-box">
+                    💡 Scrivi in chat: <b style="color: #ffffff; letter-spacing: 1px;">!q [1-4]</b>
+                </div>
+            </div>
+
+            <!-- Status Box / Votes -->
+            <div id="quiz-status" class="wordle-status-box">In attesa di voti dalla chat...</div>
+
+            <!-- Streamer manual control button for next question -->
+            <button id="quiz-next-btn" class="secondary-btn hidden quiz-action-btn">▶ PROSSIMA DOMANDA</button>
+
+            <div id="quiz-chat-feed" class="quiz-chat-feed-box">In ascolto di risposte...</div>
+            <br>
+            <button class="back-btn secondary-btn">Torna al Menu</button>
+        </div>
+    </div>
+	
+	<!-- X 08. BATTLESHIP GAME SECTION -->
+    <div id="battleship-container" class="card hidden">
+        <h2>⚓ Battaglia Navale della Chat</h2>
+        
+        <!-- Setup Screen -->
+        <div id="battleship-setup">
+            <p>Configura la sessione di gioco:</p>
+            <div class="bs-setup-group">
+                <label for="battleship-rounds-input">Numero di Round:</label><br>
+                <input type="number" id="battleship-rounds-input" value="5" min="1" max="10" class="bs-input-num">
+            </div>
+            <button id="start-battleship-btn">Avvia Partita</button>
+            <br><br>
+            <button class="back-btn secondary-btn">Torna al Menu</button>
+        </div>
+
+        <!-- Gameplay Screen -->
+        <div id="battleship-gameplay" class="hidden">
+            <!-- Top HUD Info Bar (3-column grid layout) -->
+            <div class="wordle-header-info">
+                <span id="bs-round-info">Battaglia 1/5</span>
+                <span id="bs-category-info">NAVAL BATTLE</span>
+                <span id="bs-timer-badge" class="timer-badge">⏱ 15s</span>
+            </div>
+            
+            <!-- The 6x6 Grid Rendered via JavaScript -->
+            <div id="bs-grid" class="bs-grid-board grid-board"></div>
+
+            <!-- Status & Twitch Voting Feedback -->
+            <div id="bs-status" class="wordle-status-box">In attesa di coordinate (!b [es. A3])...</div>
+
+            <!-- Streamer manual control button for next round -->
+            <button id="battleship-next-btn" class="secondary-btn hidden bs-action-btn">▶ PROSSIMA BATTAGLIA</button>
+
+            <br>
+            <button class="back-btn secondary-btn">Torna al Menu</button>
+        </div>
+    </div>
+	
+	<!-- X 09. TRUE CRIME LAB GAME SECTION -->
+    <div id="truecrime-container" class="card hidden tc-main-wrapper">
+        <!-- Setup Screen (Contains title) -->
+        <div id="truecrime-setup" class="tc-section">
+            <div class="tc-header" style="margin-bottom: 15px !important; width: 100%;">
+                <h2>🔍 True Crime Lab</h2>
+            </div>
+            <p class="tc-subtitle" style="color: #ff70b5; font-family: 'Share Tech Mono', monospace; margin-bottom: 12px;">CONFIGURA LA SESSIONE INVESTIGATIVA:</p>
+            <div class="tc-input-group" style="margin-bottom: 15px; text-align: center;">
+                <label for="truecrime-rounds-input" style="color: #00f3ff; font-family: 'Share Tech Mono', monospace; display: block; margin-bottom: 5px;">Numero di Casi:</label>
+                <input type="number" id="truecrime-rounds-input" value="3" min="1" max="5" style="width: 80px; text-align: center; font-size: 1.2em;">
+            </div>
+            <button id="start-truecrime-btn" class="tc-btn-primary">Avvia Indagine</button>
+            <button class="back-btn secondary-btn tc-back-btn">Torna al Menu</button>
+        </div>
+
+        <!-- Gameplay Screen (Title removed completely, larger high-visibility fonts) -->
+        <div id="truecrime-gameplay" class="hidden tc-section">
+			<!-- Top HUD Info Bar (True Crime specific layout) -->
+			<div class="tc-header-info">
+				<span id="truecrime-round-info">Caso 1/3</span>
+				<span id="truecrime-category-info">TRUE CRIME LAB</span>
+				<span id="truecrime-timer-badge" class="timer-badge tc-timer">⏱ 30s</span>
+			</div>
+            
+            <div class="tc-evidence-box">
+                <div id="truecrime-case-display" class="tc-case-content" style="width: 100%;">
+                    Caricamento dossier...
+                </div>
+            </div>
+            
+            <div id="truecrime-suspects-display" class="tc-suspects-grid">
+                <!-- Injected via JS -->
+            </div>
+            
+            <div class="tc-command-box">
+                <span>🕵️‍♂️ Scrivi in chat:</span> <b><code>!accusa [1-4]</code></b>
+            </div>
+
+            <div id="truecrime-status" class="tc-status-box">In attesa delle accuse della chat...</div>
+            
+            <div id="truecrime-chat-feed" class="tc-feed-box">In ascolto dei tentativi...</div>
+            
+            <button class="back-btn secondary-btn tc-back-btn" style="margin-top: 10px;">Torna al Menu</button>
+        </div>
+    </div>	
+	
+	<!-- X 10. COMPLETE THE SENTENCE GAME SECTION -->
+    <div id="sentence-container" class="card hidden">
+        <h2>Completa la Frase</h2>
+        
+        <!-- Setup Screen -->
+        <div id="sentence-setup">
+            <p>Configura la sessione:</p>
+            <div class="sentence-setup-group">
+                <label for="sentence-rounds-input">Numero di Manche:</label><br>
+                <input type="number" id="sentence-rounds-input" value="5" min="1" max="10" class="sentence-input-num">
+            </div>
+            <button id="start-sentence-btn">Avvia Partita</button>
+            <br><br>
+            <button class="back-btn secondary-btn">Torna al Menu</button>
+        </div>
+
+        <!-- Gameplay Screen -->
+        <div id="sentence-gameplay" class="hidden">
+            <!-- Top HUD Info Bar (3-column grid layout) -->
+            <div class="wordle-header-info">
+                <span id="sentence-round-info">Manche 1/5</span>
+                <span id="sentence-category-info">SENTENCE</span>
+                <span id="sentence-timer-badge" class="timer-badge">⏱ 25s</span>
+            </div>
+            
+            <div class="sentence-content-wrapper">
+                <span class="sentence-label-title">FRASE DA COMPLETARE:</span>
+                <div id="sentence-text-display" class="sentence-main-text">Caricamento...</div>
+                
+                <!-- Hint display container -->
+                <div id="sentence-hint-display" class="sentence-hint-text"></div>
+                
+                <!-- Permanent command hint for viewers -->
+                <div class="sentence-command-box">
+                    💡 Scrivi in chat: <b class="sentence-cmd-highlight">!s [parola]</b>
+                </div>
+            </div>
+
+            <!-- Status Box / Votes -->
+            <div id="sentence-status" class="wordle-status-box">In attesa della prima risposta...</div>
+
+            <!-- Streamer manual control button for next round -->
+            <button id="sentence-next-btn" class="secondary-btn hidden sentence-action-btn">▶ PROSSIMA MANCHE</button>
+
+            <div id="sentence-chat-feed" class="sentence-chat-feed-box">In ascolto di risposte...</div>
+            <br>
+            <button class="back-btn secondary-btn">Torna al Menu</button>
+        </div>
+    </div>
+	
+    <!-- 11. PLACEHOLDER CONTAINER (For W.I.P. games) -->
+    <div id="placeholder-container" class="card hidden">
+        <h2 id="placeholder-title">Work in Progress</h2>
+        <p>Questo minigioco sarà disponibile presto!</p>
+        <br>
+        <button class="back-btn secondary-btn">Torna al Menu</button>
+    </div>
+
+    <!-- Main JavaScript Module Entry Point -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

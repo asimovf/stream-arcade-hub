@@ -1,0 +1,122 @@
+/* MEMORY */
+
+/* Override standard card constraints for Memory with the dynamic magenta-cyan pulse */
+#memory-container:not(.hidden) {
+    width: 780px !important;
+    max-width: 95vw !important;
+    min-height: 600px !important;
+    background: rgba(8, 12, 22, 0.5) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding: 30px 45px !important;
+    gap: 16px !important;
+    margin: 0 auto !important;
+    animation: wordleNeonPulse 4s ease-in-out infinite !important;
+    box-sizing: border-box !important;
+}
+
+/* Memory main title styling */
+#memory-container h2 {
+    font-size: 1.8em !important;
+    letter-spacing: 2px !important;
+    margin: 0 0 5px 0 !important;
+    color: #00f3ff !important;
+    text-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+}
+
+/* Setup screen layout */
+#memory-setup:not(.hidden) {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    padding: 30px 0 !important;
+    text-align: center;
+}
+
+.memory-setup-subtitle {
+    color: #ff70b5 !important;
+    font-size: 1.1em !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    letter-spacing: 1.2px !important;
+    margin-bottom: 10px !important;
+    text-shadow: 0 0 8px rgba(255, 0, 127, 0.4) !important;
+}
+
+/* Active gameplay screen layout */
+#memory-gameplay:not(.hidden) {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+}
+
+.memory-content-wrapper {
+    margin: 5px 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.memory-target-text {
+    font-size: 1.2em !important;
+    color: #00f3ff !important;
+    font-weight: bold !important;
+    margin-bottom: 12px !important;
+    min-height: 30px !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    text-shadow: 0 0 8px rgba(0, 243, 255, 0.4) !important;
+}
+
+/* 4x4 Grid Board styling optimized for stream */
+.memory-board-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 10px !important;
+    max-width: 380px !important;
+    margin: 0 auto !important;
+}
+
+.memory-command-box {
+    margin-top: 15px !important;
+    background: rgba(255, 0, 127, 0.15) !important;
+    border: 1px solid rgba(255, 0, 127, 0.4) !important;
+    padding: 10px !important;
+    border-radius: 4px !important;
+    font-size: 0.95em !important;
+    color: #ff70b5 !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    text-shadow: 0 0 8px rgba(255, 0, 127, 0.4) !important;
+}
+
+.memory-cmd-highlight {
+    color: #ffffff !important;
+    letter-spacing: 1px !important;
+}
+
+.memory-action-btn {
+    width: 100% !important;
+    padding: 12px !important;
+    font-weight: bold !important;
+}
+
+.memory-chat-feed-box {
+    font-size: 0.85em !important;
+    color: #94a3b8 !important;
+    margin-top: 5px !important;
+    width: 100% !important;
+    background: rgba(3, 7, 18, 0.9) !important;
+    padding: 10px 14px !important;
+    border-radius: 4px !important;
+    height: 65px !important;
+    overflow-y: auto !important;
+    border: 1px solid rgba(0, 243, 255, 0.25) !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    text-align: left !important;
+    box-sizing: border-box !important;
+    box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.85) !important;
+}

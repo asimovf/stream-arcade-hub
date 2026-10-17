@@ -1,0 +1,905 @@
+{
+  "title": "Nerd & Physics Lab",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Se un gatto cade sempre in piedi e una fetta di pane imburrata cade dal lato del burro, cosa forma la loro unione perpetua?",
+      "answer": "INFINITO",
+      "hint": "Il ciclo senza fine del paradosso felino-burroso."
+    },
+    {
+      "id": 2,
+      "question": "In quale ordine di grandezza temporale un fotone attraversa il plasma solare dal centro alla superficie?",
+      "answer": "MIGLIAIA",
+      "hint": "Centinaia di migliaia di anni di scattering continuo."
+    },
+    {
+      "id": 3,
+      "question": "Qual è il cognome del fisico a cui è intitolato il celebre bosone scoperto al CERN?",
+      "answer": "HIGGS",
+      "hint": "La particella fondamentale per la massa."
+    },
+    {
+      "id": 4,
+      "question": "Se un oggetto viaggia alla velocità della luce, come diventa il tempo dal suo punto di vista?",
+      "answer": "FERMO",
+      "hint": "Il blocco temporale della relatività."
+    },
+    {
+      "id": 5,
+      "question": "Qual è l'unità di misura del flusso luminoso nel Sistema Internazionale?",
+      "answer": "LUMEN",
+      "hint": "Non è il Lux."
+    },
+    {
+      "id": 6,
+      "question": "Come si chiama l'acceleratore di particelle principale del CERN (acronimo)?",
+      "answer": "LHC",
+      "hint": "Large Hadron Collider."
+    },
+    {
+      "id": 7,
+      "question": "Come si definisce il fenomeno quantistico di correlazione a distanza tra particelle?",
+      "answer": "ENTANGLEMENT",
+      "hint": "L'azione spettrale di Einstein."
+    },
+    {
+      "id": 8,
+      "question": "Quale tra le quattro forze fondamentali è responsabile del decadimento radioattivo beta?",
+      "answer": "DEBOLE",
+      "hint": "Accanto a forte, gravitazionale ed elettromagnetica."
+    },
+    {
+      "id": 9,
+      "question": "Qual è il bosone mediatore che tiene uniti i quark nella cromodinamica quantistica?",
+      "answer": "GLUONE",
+      "hint": "Deriva dall'inglese 'colla'."
+    },
+    {
+      "id": 10,
+      "question": "Quanti sono i sapori totali di quark previsti dal Modello Standard?",
+      "answer": "SEI",
+      "hint": "Tre generazioni da due."
+    },
+    {
+      "id": 11,
+      "question": "Qual è il nome della grande galassia a spirale più vicina alla nostra?",
+      "answer": "ANDROMEDA",
+      "hint": "Ci si scontrerà in futuro."
+    },
+    {
+      "id": 12,
+      "question": "Qual è la particella mediatrice della forza elettromagnetica?",
+      "answer": "FOTONE",
+      "hint": "Costituisce anche la luce."
+    },
+    {
+      "id": 13,
+      "question": "Come si chiama la velocità minima per sfuggire all'attrazione gravitazionale di un corpo celeste?",
+      "answer": "FUGA",
+      "hint": "La velocità di..."
+    },
+    {
+      "id": 14,
+      "question": "Qual è l'antiparticella dell'elettrone?",
+      "answer": "POSITRONE",
+      "hint": "Stessa massa, carica opposta."
+    },
+    {
+      "id": 15,
+      "question": "Come si chiama il confine di un buco nero oltre il quale nulla può fuggire?",
+      "answer": "ORIZZONTE",
+      "hint": "L'orizzonte degli eventi."
+    },
+    {
+      "id": 16,
+      "question": "Qual è la costante fondamentale della meccanica quantistica che limita la precisione della misura?",
+      "answer": "PLANCK",
+      "hint": "Prende il nome dal padre della fisica quantistica."
+    },
+    {
+      "id": 17,
+      "question": "Come si chiamano i costituenti elementari di protoni e neutroni?",
+      "answer": "QUARK",
+      "hint": "Hanno nomi bizzarri come 'up' e 'down'."
+    },
+    {
+      "id": 18,
+      "question": "A quale grande famiglia di particelle appartiene l'elettrone?",
+      "answer": "LEPTONE",
+      "hint": "Significa 'leggero' in greco."
+    },
+    {
+      "id": 19,
+      "question": "Come si chiamano le particelle con spin semintero che obbediscono alla statistica di Fermi-Dirac?",
+      "answer": "FERMIONE",
+      "hint": "Costituiscono la materia ordinaria."
+    },
+    {
+      "id": 20,
+      "question": "Qual è la particella fantasma quasi priva di massa che attraversa la Terra indisturbata?",
+      "answer": "NEUTRINO",
+      "hint": "Interagisce pochissimo con la materia."
+    },
+    {
+      "id": 21,
+      "question": "Quale particella instabile è considerata una copia pesante dell'elettrone?",
+      "answer": "MUONE",
+      "hint": "Arriva dai raggi cosmici."
+    },
+    {
+      "id": 22,
+      "question": "Come si chiama lo stato della materia costituito da un gas ionizzato ad altissima temperatura?",
+      "answer": "PLASMA",
+      "hint": "Il quarto stato della materia."
+    },
+    {
+      "id": 23,
+      "question": "Qual è la grandezza termodinamica che misura il grado di disordine o degradazione di un sistema?",
+      "answer": "ENTROPIA",
+      "hint": "Tende sempre ad aumentare nell'universo."
+    },
+    {
+      "id": 24,
+      "question": "Come si definisce la tendenza di un corpo a mantenere il proprio stato di quiete o di moto rettilineo uniforme?",
+      "answer": "INERZIA",
+      "hint": "Il principio fondamentale di Galileo e Newton."
+    },
+    {
+      "id": 25,
+      "question": "Qual è il nome del momento angolare intrinseco delle particelle subatomiche?",
+      "answer": "SPIN",
+      "hint": "Non ha un vero equivalente classico macroscopico."
+    },
+    {
+      "id": 26,
+      "question": "Come si chiama il processo nucleare in cui un nucleo pesante si divide in frammenti più piccoli?",
+      "answer": "FISSIONE",
+      "hint": "Il principio delle centrali nucleari tradizionali."
+    },
+    {
+      "id": 27,
+      "question": "Come si chiama il processo in cui nuclei leggeri si uniscono liberando una quantità immensa di energia?",
+      "answer": "FUSIONE",
+      "hint": "È il motore energetico delle stelle."
+    },
+    {
+      "id": 28,
+      "question": "Come si definiscono atomi di uno stesso elemento con lo stesso numero protonico ma diversa massa?",
+      "answer": "ISOTOPO",
+      "hint": "Varianti con diverso numero di neutroni."
+    },
+    {
+      "id": 29,
+      "question": "Qual è il nome della macchina a forma di ciambella usata per il confinamento magnetico del plasma nella fusione?",
+      "answer": "TOKAMAK",
+      "hint": "Invenzione sovietica per la fusione controllata."
+    },
+    {
+      "id": 30,
+      "question": "Quale dispositivo amplifica la luce tramite l'emissione stimolata di radiazione?",
+      "answer": "LASER",
+      "hint": "Produce un fascio di luce coerente."
+    },
+    {
+      "id": 31,
+      "question": "Qual è l'unità di misura della temperatura assoluta nel Sistema Internazionale?",
+      "answer": "KELVIN",
+      "hint": "Parte dallo zero assoluto."
+    },
+    {
+      "id": 32,
+      "question": "Qual è l'unità di misura della pressione nel Sistema Internazionale?",
+      "answer": "PASCAL",
+      "hint": "Forza per unità di superficie."
+    },
+    {
+      "id": 33,
+      "question": "Qual è l'unità di misura dell'induzione magnetica?",
+      "answer": "TESLA",
+      "hint": "Intitolata al celebre inventore Nikola."
+    },
+    {
+      "id": 34,
+      "question": "Qual è l'unità di misura della potenza nel Sistema Internazionale?",
+      "answer": "WATT",
+      "hint": "Energia diviso tempo."
+    },
+    {
+      "id": 35,
+      "question": "Qual è l'unità di misura derivata dell'energia e del lavoro nel SI?",
+      "answer": "JOULE",
+      "hint": "Newtons per metri."
+    },
+    {
+      "id": 36,
+      "question": "Qual è l'unità di misura della frequenza nel Sistema Internazionale?",
+      "answer": "HERTZ",
+      "hint": "Cicli al secondo."
+    },
+    {
+      "id": 37,
+      "question": "Qual è l'unità di misura della forza nel Sistema Internazionale?",
+      "answer": "NEWTON",
+      "hint": "Massa per accelerazione."
+    },
+    {
+      "id": 38,
+      "question": "Qual è l'unità di misura della carica elettrica?",
+      "answer": "COULOMB",
+      "hint": "Ampere per secondo."
+    },
+    {
+      "id": 39,
+      "question": "Qual è l'unità di misura della resistenza elettrica?",
+      "answer": "OHM",
+      "hint": "Tensione diviso corrente."
+    },
+    {
+      "id": 40,
+      "question": "Qual è l'unità di misura della capacità elettrica?",
+      "answer": "FARAD",
+      "hint": "Carica fratto volt."
+    },
+    {
+      "id": 41,
+      "question": "Qual è l'unità di misura del flusso magnetico nel SI?",
+      "answer": "WEBER",
+      "hint": "Tesla per metri quadri."
+    },
+    {
+      "id": 42,
+      "question": "Qual è l'unità di misura dell'induttanza elettrica?",
+      "answer": "HENRY",
+      "hint": "Flusso diviso corrente."
+    },
+    {
+      "id": 43,
+      "question": "Qual è l'unità di misura supplementare per gli angoli piani?",
+      "answer": "RADIANTE",
+      "hint": "Rapporto tra arco e raggio."
+    },
+    {
+      "id": 44,
+      "question": "Qual è l'unità di misura della radioattività nel Sistema Internazionale?",
+      "answer": "BECQUEREL",
+      "hint": "Disintegrazioni al secondo."
+    },
+    {
+      "id": 45,
+      "question": "Qual è l'unità di misura della dose equivalente di radiazioni assorbite dai tessuti?",
+      "answer": "SIEVERT",
+      "hint": "Misura il danno biologico."
+    },
+    {
+      "id": 46,
+      "question": "Qual è l'unità di misura della dose assorbita di radiazioni?",
+      "answer": "GRAY",
+      "hint": "Joule per kilogrammo."
+    },
+    {
+      "id": 47,
+      "question": "Qual è l'unità di misura di lunghezza astronomica pari a circa 3,26 anni luce?",
+      "answer": "PARSEC",
+      "hint": "Deriva da parallasse secondo."
+    },
+    {
+      "id": 48,
+      "question": "Quale particella ipotetica della gravità quantistica dovrebbe mediare la forza gravitazionale?",
+      "answer": "GRAVITONE",
+      "hint": "Non è ancora stato scoperto sperimentalmente."
+    },
+    {
+      "id": 49,
+      "question": "Come si chiama la particella ipotetica che viaggia sempre a una velocità superiore a quella della luce?",
+      "answer": "TACHIONE",
+      "hint": "Violerebbe la causalità classica."
+    },
+    {
+      "id": 50,
+      "question": "Qual è il punto della sfera celeste situato esattamente sopra la testa dell'osservatore?",
+      "answer": "ZENIT",
+      "hint": "Il punto opposto al nadir."
+    },
+    {
+      "id": 51,
+      "question": "Qual è il punto della sfera celeste situato esattamente sotto i piedi dell'osservatore?",
+      "answer": "NADIR",
+      "hint": "Il punto opposto allo zenit."
+    },
+    {
+      "id": 52,
+      "question": "Come si chiama la frazione di radiazione solare riflessa da una superficie planetaria?",
+      "answer": "ALBEDO",
+      "hint": "Indica il potere riflettente di un corpo celeste."
+    },
+    {
+      "id": 53,
+      "question": "Quale famoso pendolo dimostrò sperimentalmente la rotazione terrestre?",
+      "answer": "FOUCAULT",
+      "hint": "Prende il nome dal fisico francese che lo ideò nel 1851."
+    },
+    {
+      "id": 54,
+      "question": "Come si chiama la variazione di frequenza di un'onda percepita da un osservatore in moto rispetto alla sorgente?",
+      "answer": "DOPPLER",
+      "hint": "Effetto acustico e luminoso legato al movimento."
+    },
+    {
+      "id": 55,
+      "question": "Quale forza apparente devia i corpi in movimento nei sistemi di riferimento rotanti?",
+      "answer": "CORIOLIS",
+      "hint": "Fondamentale per la dinamica dei cicloni atmosferici."
+    },
+    {
+      "id": 56,
+      "question": "Come si chiama il punto geometrico in cui si concentra idealmente tutta la massa di un corpo per gli effetti gravitazionali?",
+      "answer": "BARICCENTRO",
+      "hint": "Il centro di massa di un sistema."
+    },
+    {
+      "id": 57,
+      "question": "Quale grandezza fisica misura l'attitudine di una forza a imprimere una rotazione a un corpo?",
+      "answer": "MOMENTO",
+      "hint": "Prodotto della forza per il braccio."
+    },
+    {
+      "id": 58,
+      "question": "Come si definisce la resistenza interna di un fluido allo scorrimento?",
+      "answer": "VISCOSITA",
+      "hint": "Contrapposta alla fluidità."
+    },
+    {
+      "id": 59,
+      "question": "Come si chiama la formazione e il rapido collasso di bolle di vapore in un liquido sottoposto a variazioni di pressione?",
+      "answer": "CAVITAZIONE",
+      "hint": "Può erodere le eliche delle navi."
+    },
+    {
+      "id": 60,
+      "question": "Come si chiamano le quasiparticelle che descrivono le oscillazioni collettive del gas di elettroni nei metalli?",
+      "answer": "PLASMONI",
+      "hint": "Pacchetti quantizzati di oscillazione del plasma."
+    },
+    {
+      "id": 61,
+      "question": "Qual è il cognome del fisico italiano premio Nobel che diresse la costruzione del primo reattore nucleare a Chicago?",
+      "answer": "FERMI",
+      "hint": "Il 'papa' della fisica italiana."
+    },
+    {
+      "id": 62,
+      "question": "Qual è il cognome del fisico autore della teoria della relatività generale?",
+      "answer": "EINSTEIN",
+      "hint": "Ha rivoluzionato la nostra concezione di spazio e tempo."
+    },
+    {
+      "id": 63,
+      "question": "Qual è il cognome del fisico teorico inglese che ha formulato l'equazione relativistica per l'elettrone?",
+      "answer": "DIRAC",
+      "hint": "Predisse l'esistenza dell'antimateria."
+    },
+    {
+      "id": 64,
+      "question": "Qual è il cognome dello scienziato scozzese che unificò elettricità e magnetismo nelle sue quattro celebri equazioni?",
+      "answer": "MAXWELL",
+      "hint": "Le fondamenta dell'elettrodinamica classica."
+    },
+    {
+      "id": 65,
+      "question": "Qual è il cognome del fisico danese che propose il modello quantistico dell'atomo a orbite stazionarie?",
+      "answer": "BOHR",
+      "hint": "Pioniere della prima meccanica quantistica."
+    },
+    {
+      "id": 66,
+      "question": "Qual è il cognome del fisico austriaco celebre per la sua equazione d'onda fondamentale della meccanica quantistica?",
+      "answer": "SCHRODINGER",
+      "hint": "Famoso anche per il paradosso del gatto."
+    },
+    {
+      "id": 67,
+      "question": "Qual è il cognome del fisico tedesco che ha formulato il principio di indeterminazione?",
+      "answer": "HEISENBERG",
+      "hint": "Pilastro fondamentale della quantistica."
+    },
+    {
+      "id": 68,
+      "question": "Qual è il cognome del fisico che stabilì che due elettroni non possono trovarsi nello stesso stato quantico?",
+      "answer": "PAULI",
+      "hint": "Il principio di esclusione."
+    },
+    {
+      "id": 69,
+      "question": "Qual è il cognome del fisico che diede l'interpretazione probabilistica alla funzione d'onda quantistica?",
+      "answer": "BORN",
+      "hint": "Nonno della cantante Olivia Newton-John."
+    },
+    {
+      "id": 70,
+      "question": "Qual è il cognome del fisico americano celebre per i suoi diagrammi di calcolo in elettrodinamica quantistica?",
+      "answer": "FEYNMAN",
+      "hint": "Autore delle celebri 'Lezioni di fisica'."
+    },
+    {
+      "id": 71,
+      "question": "Qual è il cognome del celebre cosmologo autore di 'Dal big bang ai buchi neri'?",
+      "answer": "HAWKING",
+      "hint": "Ha studiato la radiazione di evaporazione dei buchi neri."
+    },
+    {
+      "id": 72,
+      "question": "Come si chiama la nube sferica di comete situata ai confini estremi del sistema solare?",
+      "answer": "OORT",
+      "hint": "Prende il nome dall'astronomo olandese Jan Oort."
+    },
+    {
+      "id": 73,
+      "question": "Qual è il cognome dell'astronomo a cui è intitolato il telescopio spaziale che ha misurato l'espansione dell'universo?",
+      "answer": "HUBBLE",
+      "hint": "Ha provato la recessione delle galassie."
+    },
+    {
+      "id": 74,
+      "question": "Qual è il cognome dell'astronomo tedesco che formulò le tre leggi sul moto dei pianeti?",
+      "answer": "KEPLERO",
+      "hint": "Ha usato le osservazioni di Tycho Brahe."
+    },
+    {
+      "id": 75,
+      "question": "Qual è il cognome del canonico polacco che rivoluzionò l'astronomia ponendo il Sole al centro del sistema?",
+      "answer": "COPERNICO",
+      "hint": "Il sistema eliocentrico moderno."
+    },
+    {
+      "id": 76,
+      "question": "Qual è il nome di battesimo dell'astronomo danese famoso per le sue altissime precisioni osservative senza telescopio?",
+      "answer": "TYCHO",
+      "hint": "Tycho Brahe."
+    },
+    {
+      "id": 77,
+      "question": "Qual è il cognome dello scienziato pisano padre del metodo scientifico moderno?",
+      "answer": "GALILEI",
+      "hint": "Puntò per primo il cannocchiale verso il cielo."
+    },
+    {
+      "id": 78,
+      "question": "Qual è il cognome della celebre scienziata due volte premio Nobel per la fisica e la chimica?",
+      "answer": "CURIE",
+      "hint": "Pioniera nello studio della radioattività."
+    },
+    {
+      "id": 79,
+      "question": "Qual è il cognome del fisico neozelandese che scoprì il nucleo atomico con l'esperimento della lamina d'oro?",
+      "answer": "RUTHERFORD",
+      "hint": "Il padre della fisica nucleare."
+    },
+    {
+      "id": 80,
+      "question": "Qual è il cognome dello scienziato che nel 1932 scoprì il neutrone?",
+      "answer": "CHADWICK",
+      "hint": "Completò il modello del nucleo atomico con protoni e neutroni."
+    },
+    {
+      "id": 81,
+      "question": "Qual è il cognome del fisico che nel 1932 scoprì il positrone nei raggi cosmici?",
+      "answer": "ANDERSON",
+      "hint": "Carl David Anderson."
+    },
+    {
+      "id": 82,
+      "question": "Qual è il cognome del fisico gallese che scoprì i pioni nei raggi cosmici?",
+      "answer": "POWELL",
+      "hint": "Cecil Frank Powell."
+    },
+    {
+      "id": 83,
+      "question": "Come si chiama la radiazione elettromagnetica emessa quando una particella carica supera la velocità della luce in un mezzo?",
+      "answer": "CHERENKOV",
+      "hint": "Produce il caratteristico colore azzurro nei noccioli dei reattori nucleari."
+    },
+    {
+      "id": 84,
+      "question": "Come si chiama l'effetto quantistico per cui due piastre neutre nel vuoto si attraggono?",
+      "answer": "CASIMIR",
+      "hint": "Dovuto alle fluttuazioni del vuoto quantistico."
+    },
+    {
+      "id": 85,
+      "question": "Come si chiama il fenomeno quantistico per cui una particella attraversa una barriera energetica insormontabile classicamente?",
+      "answer": "TUNNEL",
+      "hint": "L'effetto tunnel alla base della fusione stellare e dei microscopi a scansione."
+    },
+    {
+      "id": 86,
+      "question": "Come si chiama la proprietà di alcuni materiali di azzerare la resistenza elettrica sotto una certa temperatura critica?",
+      "answer": "SUPERCONDUTTIVITA",
+      "hint": "Permette il flusso di corrente senza dissipazione."
+    },
+    {
+      "id": 87,
+      "question": "Come si chiama lo stato della materia in cui un fluido scorre senza alcuna viscosità?",
+      "answer": "SUPERFLUIDITA",
+      "hint": "Visibile nell'elio liquido a bassissime temperature."
+    },
+    {
+      "id": 88,
+      "question": "Come si chiamano le particelle con spin intero che obbediscono alla statistica di Bose-Einstein?",
+      "answer": "BOSONE",
+      "hint": "Comprendono i mediatori delle forze."
+    },
+    {
+      "id": 89,
+      "question": "Come si chiamano le particelle subatomiche composte da quark che risentono della forza forte?",
+      "answer": "HADRONE",
+      "hint": "Comprendono sia barioni che mesoni."
+    },
+    {
+      "id": 90,
+      "question": "Come si chiamano gli adroni composti da tre quark, come protoni e neutroni?",
+      "answer": "BARIONE",
+      "hint": "Significa 'pesante' in greco."
+    },
+    {
+      "id": 91,
+      "question": "Come si chiamano gli adroni composti da una coppia quark-antiquark?",
+      "answer": "MESONE",
+      "hint": "Particelle instabili di massa intermedia."
+    },
+    {
+      "id": 92,
+      "question": "Qual è il nome del leptone più pesante della terza generazione, scoperto nel 1975?",
+      "answer": "TAUONE",
+      "hint": "Simile all'elettrone e al muone ma molto più massiccio."
+    },
+    {
+      "id": 93,
+      "question": "Qual è il nome del quark più pesante in assoluto tra i sei conosciuti?",
+      "answer": "TOP",
+      "hint": "Formato di coppia con il quark bottom."
+    },
+    {
+      "id": 94,
+      "question": "Qual è il nome del sapore del quark che forma la seconda generazione insieme al quark strange?",
+      "answer": "CHARM",
+      "hint": "Tradotto spesso come 'incantato'."
+    },
+    {
+      "id": 95,
+      "question": "Qual è il nome del sapore del quark associato alla 'stranezza' nel Modello Standard?",
+      "answer": "STRANGE",
+      "hint": "Caratterizzato da un numero quantico omonimo."
+    },
+    {
+      "id": 96,
+      "question": "Qual è il nome del quark di tipo down appartenente alla terza generazione?",
+      "answer": "BOTTOM",
+      "hint": "Accompagnato dal quark top."
+    },
+    {
+      "id": 97,
+      "question": "Qual è la carica fondamentale della cromodinamica quantistica, definita con nomi di tonalità ottiche?",
+      "answer": "COLORE",
+      "hint": "Rosso, verde e blu."
+    },
+    {
+      "id": 98,
+      "question": "Come si chiama la proprietà per cui i quark non possono mai essere isolati singolarmente allo stato libero?",
+      "answer": "CONFINAMENTO",
+      "hint": "Impedisce l'osservazione di quark nudi."
+    },
+    {
+      "id": 99,
+      "question": "Come si chiama la proprietà per cui l'interazione tra quark diventa debole a grandissime energie e distanze piccolissime?",
+      "answer": "ASINTOTICA",
+      "hint": "Libertà asintotica."
+    },
+    {
+      "id": 100,
+      "question": "Come viene chiamata la materia composta da antiparticelle speculari a quelle ordinarie?",
+      "answer": "ANTIMATERIA",
+      "hint": "Annichila a contatto con la materia."
+    },
+    {
+      "id": 101,
+      "question": "Come si chiama il processo in cui materia e antimateria si scontrano trasformandosi interamente in energia pura?",
+      "answer": "ANNICHILAZIONE",
+      "hint": "Conversione totale secondo la formula di Einstein."
+    },
+    {
+      "id": 102,
+      "question": "Come si chiama la fase di espansione esponenziale rapidissima avvenuta nei primi istanti dell'universo?",
+      "answer": "INFLAZIONE",
+      "hint": "Risolve i problemi dell'orizzonte e della piattezza cosmologica."
+    },
+    {
+      "id": 103,
+      "question": "Come si chiama il punto teorico di densità infinita al centro di un buco nero?",
+      "answer": "SINGOLARITA",
+      "hint": "Dove le leggi della fisica classica collassano."
+    },
+    {
+      "id": 104,
+      "question": "Come si chiama la regione esterna all'orizzonte degli eventi di un buco nero in rotazione da cui è possibile estrarre energia?",
+      "answer": "ERGOSFERA",
+      "hint": "Legata al processo di Penrose."
+    },
+    {
+      "id": 105,
+      "question": "Come si chiama una stella di neutroni dotata di un campo magnetico colossale?",
+      "answer": "MAGNETAR",
+      "hint": "La classe di oggetti celesti più magnetica dell'universo."
+    },
+    {
+      "id": 106,
+      "question": "Come si chiama una stella di neutroni altamente magnetizzata che emette radiazioni a impulsi regolari?",
+      "answer": "PULSAR",
+      "hint": "Il faro periodico dello spazio profondo."
+    },
+    {
+      "id": 107,
+      "question": "Come si chiama il nucleo galattico estremamente luminoso alimentato da un buco nero supermassiccio?",
+      "answer": "QUASAR",
+      "hint": "Oggetti quasi-stellari lontanissimi."
+    },
+    {
+      "id": 108,
+      "question": "Come si chiama un quasar il cui getto di particelle relativistiche è puntato direttamente verso la Terra?",
+      "answer": "BLAZAR",
+      "hint": "Nucleo attivo di galassia altamente variabile."
+    },
+    {
+      "id": 109,
+      "question": "Come si chiama la branca dell'astronomia che misura l'intensità della radiazione luminosa degli astri?",
+      "answer": "FOTOMETRIA",
+      "hint": "Misurazione dei flussi di fotoni stellari."
+    },
+    {
+      "id": 110,
+      "question": "Come si chiama la tecnica di analisi della luce basata sulla scomposizione nelle sue lunghezze d'onda?",
+      "answer": "SPETTROSCOPIA",
+      "hint": "Permette di identificare la composizione chimica delle stelle."
+    },
+    {
+      "id": 111,
+      "question": "Come si chiama il metodo geometrico di misurazione delle distanze stellari basato sullo spostamento angolare apparente?",
+      "answer": "PARALLASSE",
+      "hint": "Sfrutta il moto orbitale della Terra attorno al Sole."
+    },
+    {
+      "id": 112,
+      "question": "Come si chiamano le stelle variabili pulsanti utilizzate come candele standard per calcolare le distanze cosmiche?",
+      "answer": "CEFEIDI",
+      "hint": "Prendono il nome dalla prototipo delta Cephei."
+    },
+    {
+      "id": 113,
+      "question": "Come si chiama lo spostamento delle linee spettrali verso lunghezze d'onda maggiori dovuto alla recessione galattica?",
+      "answer": "REDSHIFT",
+      "hint": "La prova principale dell'espansione dell'universo."
+    },
+    {
+      "id": 114,
+      "question": "Come si chiama lo spostamento dello spettro verso lunghezze d'onda minori per sorgenti in avvicinamento?",
+      "answer": "BLUESHIFT",
+      "hint": "Compressione della luce per moto reciproco."
+    },
+    {
+      "id": 115,
+      "question": "Come si chiama la radiazione fossile residua del Big Bang che permea tutto l'universo?",
+      "answer": "FONDO",
+      "hint": "Il fondo cosmico a microonde."
+    },
+    {
+      "id": 116,
+      "question": "Come si chiama il processo di formazione dei nuclei atomici leggeri avvenuto nei primi minuti dell'universo?",
+      "answer": "NUCLEOSINTESI",
+      "hint": "Nucleosintesi primordiale."
+    },
+    {
+      "id": 117,
+      "question": "Come si chiama la misteriosa forma di materia che non emette luce ma esercita attrazione gravitazionale nelle galassie?",
+      "answer": "SCURA",
+      "hint": "Materia oscura."
+    },
+    {
+      "id": 118,
+      "question": "Come si chiama la componente misteriosa responsabile dell'accelerazione dell'espansione dell'universo?",
+      "answer": "ENERGIA",
+      "hint": "Energia oscura."
+    },
+    {
+      "id": 119,
+      "question": "Come si chiama il processo fisico ipotetico che ha generato un eccesso di materia rispetto all'antimateria nell'universo?",
+      "answer": "BARIOGENESI",
+      "hint": "Violazione della simmetria barionica."
+    },
+    {
+      "id": 120,
+      "question": "Come si chiama la proprietà per cui le leggi fisiche rimangono immutate rispetto a determinate trasformazioni?",
+      "answer": "INVARIANZA",
+      "hint": "Simmetrie e conservazioni fisiche."
+    },
+    {
+      "id": 121,
+      "question": "Come si chiama il fenomeno per cui una simmetria fondamentale non si riflette nello stato ground state del sistema?",
+      "answer": "SIMMETRIA",
+      "hint": "Rottura spontanea di simmetria."
+    },
+    {
+      "id": 122,
+      "question": "Come si chiama la violazione della simmetria tra specchio destro e sinistro osservata nelle interazioni deboli?",
+      "answer": "PARITA",
+      "hint": "Violazione della parità."
+    },
+    {
+      "id": 123,
+      "question": "Come si chiama la combinazione di coniugazione di carica e inversione spaziale violata nel decadimento dei kaoni?",
+      "answer": "CP",
+      "hint": "Simmetria CP."
+    },
+    {
+      "id": 124,
+      "question": "Qual è il teorema fondamentale secondo cui le leggi fisiche sono invarianti per inversione combinata di carica, parità e tempo?",
+      "answer": "CPT",
+      "hint": "Invarianza CPT."
+    },
+    {
+      "id": 125,
+      "question": "Come si chiama la funzione scalare differenza tra energia cinetica e potenziale usata nella formulazione della meccanica?",
+      "answer": "LAGRANGIANA",
+      "hint": "Principio di minima azione."
+    },
+    {
+      "id": 126,
+      "question": "Come si chiama la funzione che rappresenta l'energia totale di un sistema espressa in coordinate canoniche?",
+      "answer": "HAMILTONIANA",
+      "hint": "Meccanica hamiltoniana."
+    },
+    {
+      "id": 127,
+      "question": "Come si chiamano gli oggetti matematici a più componenti utilizzati nella relatività generale di Einstein?",
+      "answer": "TENSORI",
+      "hint": "Calcolo tensoriale."
+    },
+    {
+      "id": 128,
+      "question": "Come si chiama la curva geometrica che rappresenta il percorso più breve nello spazio-tempo curvo?",
+      "answer": "GEODESICA",
+      "hint": "La traiettoria naturale dei corpi in caduta libera."
+    },
+    {
+      "id": 129,
+      "question": "Come si chiama la proprietà geometrica dello spazio-tempo indotta dalla presenza di massa ed energia?",
+      "answer": "CURVATURA",
+      "hint": "La gravità come curvatura geometrica."
+    },
+    {
+      "id": 130,
+      "question": "Come si chiama il tensore fondamentale che definisce la distanza geometrica nello spazio-tempo?",
+      "answer": "METRICA",
+      "hint": "Tensore metrico."
+    },
+    {
+      "id": 131,
+      "question": "Come si chiamano le coordinate spazio-temporali descriventi un sistema di riferimento accelerato uniforme?",
+      "answer": "RINDLER",
+      "hint": "Coordinate di Rindler."
+    },
+    {
+      "id": 132,
+      "question": "Come si chiama la soluzione esatta delle equazioni di Einstein per un buco nero sferico non rotante?",
+      "answer": "SCHWARZSCHILD",
+      "hint": "Metrica di Schwarzschild."
+    },
+    {
+      "id": 133,
+      "question": "Come si chiama la metrica esatta per un buco nero stazionario in rotazione?",
+      "answer": "KERR",
+      "hint": "Buco nero di Kerr."
+    },
+    {
+      "id": 134,
+      "question": "Come si chiama la soluzione delle equazioni di Einstein per un buco nero carico elettricamente?",
+      "answer": "REISSNER",
+      "hint": "Metrica di Reissner-Nordström."
+    },
+    {
+      "id": 135,
+      "question": "Come si chiama il presunto tunnel geodetico che collega due punti distinti dello spazio-tempo?",
+      "answer": "WORMHOLE",
+      "hint": "Ponte di Einstein-Rosen."
+    },
+    {
+      "id": 136,
+      "question": "Come si chiama il principio secondo cui l'informazione di un volume di spazio può essere codificata sulla sua superficie?",
+      "answer": "OLOGRAFICO",
+      "hint": "Principio olografico."
+    },
+    {
+      "id": 137,
+      "question": "Come si chiama la teoria che sostituisce le particelle puntiformi con oggetti unidimensionali vibranti?",
+      "answer": "STRINGHE",
+      "hint": "Teoria delle stringhe."
+    },
+    {
+      "id": 138,
+      "question": "Come si chiamano gli oggetti estesi multidimensionali previsti nelle teorie delle stringhe e della M-teoria?",
+      "answer": "BRANE",
+      "hint": "Branelli multidimensionali."
+    },
+    {
+      "id": 139,
+      "question": "Come si chiama l'approccio non perturbativo alla gravità quantistica basato sulla quantizzazione della geometria?",
+      "answer": "LOOP",
+      "hint": "Gravità quantistica a loop."
+    },
+    {
+      "id": 140,
+      "question": "Come si chiama la simmetria ipotetica che collega bosoni e fermioni scambiandone le proprietà?",
+      "answer": "SUPERSIMMETRIA",
+      "hint": "Prevede l'esistenza di superpartner."
+    },
+    {
+      "id": 141,
+      "question": "Come si chiama la particella ipotetica leggera proposta per risolvere il problema della forte simmetria CP?",
+      "answer": "AXION",
+      "hint": "Candidato per la materia oscura."
+    },
+    {
+      "id": 142,
+      "question": "Come si chiamano le particelle massicce debolmente interagenti ipotetiche candidate a comporre la materia oscura?",
+      "answer": "WIMP",
+      "hint": "Weakly Interacting Massive Particles."
+    },
+    {
+      "id": 143,
+      "question": "Come si chiamano gli oggetti compatti massicci nell'alone galattico proposti come componenti della materia oscura?",
+      "answer": "MACHO",
+      "hint": "Massive Compact Halo Objects."
+    },
+    {
+      "id": 144,
+      "question": "Come si chiama il campo scalare ipotetico ritenuto responsabile dell'inflazione cosmica?",
+      "answer": "INFLATONE",
+      "hint": "Il quanto del campo inflazionario."
+    },
+    {
+      "id": 145,
+      "question": "Come si chiama una struttura periodica dielettrica progettata per controllare la propagazione dei fotoni?",
+      "answer": "FOTONICO",
+      "hint": "Cristallo fotonico."
+    },
+    {
+      "id": 146,
+      "question": "Come si chiama il ramo della nanotecnologia che studia il controllo della luce su scala inferiore alla lunghezza d'onda tramite plasmoni?",
+      "answer": "PLASMONICO",
+      "hint": "Ottica plasmonica."
+    },
+    {
+      "id": 147,
+      "question": "Come si chiama la proprietà di alcuni materiali di generare tensione elettrica se sottoposti a deformazione meccanica?",
+      "answer": "PIEZOELETTRICO",
+      "hint": "Effetto piezoelettrico."
+    },
+    {
+      "id": 148,
+      "question": "Come si chiama l'effetto per cui una differenza di temperatura genera una tensione elettrica in un circuito?",
+      "answer": "TERMOELETTRICO",
+      "hint": "Effetto Seebeck."
+    },
+    {
+      "id": 149,
+      "question": "Come si definisce qualsiasi velocità ipotetica superiore a quella della luce nel vuoto?",
+      "answer": "SUPERLUMINALE",
+      "hint": "Velocità oltre c."
+    },
+    {
+      "id": 150,
+      "question": "Come si chiama l'unità fondamentale indivisibile di una grandezza fisica nella meccanica quantistica?",
+      "answer": "QUANTO",
+      "hint": "Il mattoncino elementare dei sistemi quantizzati."
+    }
+  ]
+}

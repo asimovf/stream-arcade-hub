@@ -1,0 +1,355 @@
+{
+    "title": "Cinema e Serie TV",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Chi ha diretto 'Inception'?",
+            "options": ["Spielberg", "Nolan", "Tarantino", "Scorsese"],
+            "answer": "Nolan",
+            "hint": "Sogni nei sogni."
+        },
+        {
+            "id": 2,
+            "text": "Nome della nave in Star Trek?",
+            "options": ["Falcon", "Nostromo", "USS Enterprise", "Serenity"],
+            "answer": "USS Enterprise",
+            "hint": "Capitano Kirk o Picard."
+        },
+        {
+            "id": 3,
+            "text": "Attore di Iron Man nell'MCU?",
+            "options": ["Chris Evans", "Tom Holland", "Robert Downey Jr.", "Mark Ruffalo"],
+            "answer": "Robert Downey Jr.",
+            "hint": "Tony Stark."
+        },
+        {
+            "id": 4,
+            "text": "Pianeta natale di Luke Skywalker?",
+            "options": ["Tatooine", "Alderaan", "Naboo", "Coruscant"],
+            "answer": "Tatooine",
+            "hint": "Due soli."
+        },
+        {
+            "id": 5,
+            "text": "Protagonista di Breaking Bad?",
+            "options": ["Walter White", "Jesse Pinkman", "Saul Goodman", "Hank Schrader"],
+            "answer": "Walter White",
+            "hint": "Heisenberg."
+        },
+        {
+            "id": 6,
+            "text": "Quale film ha vinto più premi Oscar nella storia?",
+            "options": ["Titanic", "Il Signore degli Anelli - Il Ritorno del Re", "Ben-Hur", "Tutti e tre a pari merito"],
+            "answer": "Tutti e tre a pari merito",
+            "hint": "Condividono il record di 11 statuette."
+        },
+        {
+            "id": 7,
+            "text": "Chi ha diretto Pulp Fiction?",
+            "options": ["Quentin Tarantino", "David Fincher", "Stanley Kubrick", "Ridley Scott"],
+            "answer": "Quentin Tarantino",
+            "hint": "Cult movie del 1994."
+        },
+        {
+            "id": 8,
+            "text": "Quale attore interpreta Jack Dawson in Titanic?",
+            "options": ["Brad Pitt", "Leonardo DiCaprio", "Johnny Depp", "Tom Cruise"],
+            "answer": "Leonardo DiCaprio",
+            "hint": "Il re del mondo sul ponte della nave."
+        },
+        {
+            "id": 9,
+            "text": "Come si chiama il cyborg assassino nel primo film di Terminator?",
+            "options": ["T-1000", "T-800", "RX-9", "Cyber-X"],
+            "answer": "T-800",
+            "hint": "Modello cibernetico interpretato da Arnold Schwarzenegger."
+        },
+        {
+            "id": 10,
+            "text": "Qual è il nome del fedele maggiordomo di Batman?",
+            "options": ["Alfred Pennyworth", "Jarvis", "Wong", "Giles"],
+            "answer": "Alfred Pennyworth",
+            "hint": "Gestisce la Batcaverna e consiglia Bruce Wayne."
+        },
+        {
+            "id": 11,
+            "text": "Chi ha diretto la celebre trilogia cinematografica de 'Il Signore degli Anelli'?",
+            "options": ["George Lucas", "Peter Jackson", "James Cameron", "Guillermo del Toro"],
+            "answer": "Peter Jackson",
+            "hint": "Il regista neozelandese premio Oscar."
+        },
+        {
+            "id": 12,
+            "text": "Quale serie TV Netflix è ambientata nella fittizia cittadina di Hawkins?",
+            "options": ["Dark", "Stranger Things", "Twin Peaks", "The OA"],
+            "answer": "Stranger Things",
+            "hint": "Un gruppo di ragazzi affronta il Sottosopra."
+        },
+        {
+            "id": 13,
+            "text": "Quale attore interpreta Harry Potter nell'omonima saga cinematografica?",
+            "options": ["Rupert Grint", "Tom Felton", "Daniel Radcliffe", "Elijah Wood"],
+            "answer": "Daniel Radcliffe",
+            "hint": "Il giovane mago con la cicatrice a saetta."
+        },
+        {
+            "id": 14,
+            "text": "In quale film d'animazione Pixar il pesce Marlin cerca disperatamente il figlio?",
+            "options": ["Monsters & Co.", "Alla ricerca di Nemo", "Toy Story", "Cars"],
+            "answer": "Alla ricerca di Nemo",
+            "hint": "Un viaggio avventuroso attraverso l'oceano."
+        },
+        {
+            "id": 15,
+            "text": "Qual è il nome del celebre locale gestito da Rick Blaine in 'Casablanca'?",
+            "options": ["Rick's Café Américain", "Blue Parrot", "The Oasis", "La Taverna"],
+            "answer": "Rick's Café Américain",
+            "hint": "Suonala di nuovo, Sam."
+        },
+        {
+            "id": 16,
+            "text": "Chi ha diretto il capolavoro della fantascienza '2001: Odissea nello spazio'?",
+            "options": ["Stanley Kubrick", "Ridley Scott", "Steven Spielberg", "George Lucas"],
+            "answer": "Stanley Kubrick",
+            "hint": "Il computer HAL 9000 è il co-protagonista."
+        },
+        {
+            "id": 17,
+            "text": "Quale serie TV epica si conclude con la lotta per il Trono di Spade a Westeros?",
+            "options": ["Vikings", "The Witcher", "Game of Thrones", "Spartacus"],
+            "answer": "Game of Thrones",
+            "hint": "Tratta dai romanzi di George R.R. Martin."
+        },
+        {
+            "id": 18,
+            "text": "Quale leggendario attore interpreta Don Vito Corleone ne 'Il Padrino' (1972)?",
+            "options": ["Al Pacino", "Robert De Niro", "Marlon Brando", "Jack Nicholson"],
+            "answer": "Marlon Brando",
+            "hint": "Un'offerta che non si può rifiutare."
+        },
+        {
+            "id": 19,
+            "text": "Come si chiama il fedele cane di Topolino nell'universo Disney?",
+            "options": ["Goofy", "Pluto", "Snoopy", "Bolt"],
+            "answer": "Pluto",
+            "hint": "Non parla ma è intelligentissimo e affettuoso."
+        },
+        {
+            "id": 20,
+            "text": "Quale celebre regista ha diretto sia 'Schindler's List' che 'Jurassic Park' nel 1993?",
+            "options": ["Steven Spielberg", "Martin Scorsese", "James Cameron", "Francis Ford Coppola"],
+            "answer": "Steven Spielberg",
+            "hint": "Uno dei cineasti più celebri e influenti di sempre."
+        },
+        {
+            "id": 21,
+            "text": "In quale film di Quentin Tarantino i protagonisti recitano battute bibliche prima di sparare?",
+            "options": ["Le Iene", "Pulp Fiction", "Django Unchained", "Kill Bill"],
+            "answer": "Pulp Fiction",
+            "hint": "La scena di Ezekiel 25:17."
+        },
+        {
+            "id": 22,
+            "text": "Quale attore interpreta il protagonista Neo nella trilogia originale di 'Matrix'?",
+            "options": ["Brad Pitt", "Keanu Reeves", "Johnny Depp", "Matt Damon"],
+            "answer": "Keanu Reeves",
+            "hint": "Sceglie tra la pillola rossa e la pillola blu."
+        },
+        {
+            "id": 23,
+            "text": "Come si chiama il grattacielo in cui si svolge il primo film d'azione 'Die Hard'?",
+            "options": ["Nakatomi Plaza", "Stark Tower", "Wayne Enterprises", "Metropolis Tower"],
+            "answer": "Nakatomi Plaza",
+            "hint": "John McClane deve liberarlo dai terroristi a Natale."
+        },
+        {
+            "id": 24,
+            "text": "Quale serie TV spagnola vede un gruppo di rapinatori con le maschere di Dalí?",
+            "options": ["Élite", "La casa di carta", "Toy Boy", "Vis a vis"],
+            "answer": "La casa di carta",
+            "hint": "Il celebre inno 'Bella ciao' ne è la colonna sonora."
+        },
+        {
+            "id": 25,
+            "text": "Quale capolavoro d'animazione dello Studio Ghibli e di Hayao Miyazaki ha vinto l'Oscar?",
+            "options": ["Il mio vicino Totoro", "La città incantata", "Princess Mononoke", "Ponyo"],
+            "answer": "La città incantata",
+            "hint": "Chihiro lavora in un bagno termale per spiriti."
+        },
+        {
+            "id": 26,
+            "text": "Chi è il creatore della celebre serie TV distopica e antologica 'Black Mirror'?",
+            "options": ["Charlie Brooker", "Ryan Murphy", "Damon Lindelof", "Vince Gilligan"],
+            "answer": "Charlie Brooker",
+            "hint": "Esplora i lati oscuri della tecnologia moderna."
+        },
+        {
+            "id": 27,
+            "text": "Quale attore interpreta il bizzarro Capitano Jack Sparrow nella saga Disney?",
+            "options": ["Orlando Bloom", "Johnny Depp", "Geoffrey Rush", "Jude Law"],
+            "answer": "Johnny Depp",
+            "hint": "Il pirata più famoso dei Sette Mari."
+        },
+        {
+            "id": 28,
+            "text": "Qual è il nome del pianeta natale distrutto di Superman?",
+            "options": ["Krypton", "Vulcan", "Asgard", "Gallifrey"],
+            "answer": "Krypton",
+            "hint": "I suoi genitori lo salvarono spedendolo sulla Terra."
+        },
+        {
+            "id": 29,
+            "text": "Quale film del 1976 ha lanciato Sylvester Stallone nel ruolo del pugile Rocky Balboa?",
+            "options": ["Rambo", "Rocky", "Creed", "Fuga per la vittoria"],
+            "answer": "Rocky",
+            "hint": "Lo Stallone Italiano sul ring."
+        },
+        {
+            "id": 30,
+            "text": "Chi ha diretto il capolavoro sudcoreano 'Parasite', vincitore dell'Oscar come miglior film?",
+            "options": ["Park Chan-wook", "Bong Joon-ho", "Kim Ki-duk", "Lee Chang-dong"],
+            "answer": "Bong Joon-ho",
+            "hint": "Una famiglia povera s'infiltra nella vita di una ricca."
+        },
+        {
+            "id": 31,
+            "text": "Quale attore ha interpretato magistralmente il Joker in 'Il Cavaliere Oscuro' di Nolan?",
+            "options": ["Joaquin Phoenix", "Jared Leto", "Heath Ledger", "Jack Nicholson"],
+            "answer": "Heath Ledger",
+            "hint": "Ha vinto un Oscar postumo per questa memorabile interpretazione."
+        },
+        {
+            "id": 32,
+            "text": "Come si chiama la celebre scuola di magia e stregoneria frequentata da Harry Potter?",
+            "options": ["Beauxbatons", "Durmstrang", "Hogwarts", "Ilvermorny"],
+            "answer": "Hogwarts",
+            "hint": "Ha quattro case: Grifondoro, Serpeverde, Corvonero e Tassorosso."
+        },
+        {
+            "id": 33,
+            "text": "Quale serie TV ha per protagonista un analista della scientifica che di notte è un serial killer giustiziere?",
+            "options": ["Hannibal", "Dexter", "You", "Mindhunter"],
+            "answer": "Dexter",
+            "hint": "Lavora a Miami e segue il 'Codice di Harry'."
+        },
+        {
+            "id": 34,
+            "text": "Chi ha diretto i capolavori del genere spaghetti western come 'Il buono, il brutto, il cattivo'?",
+            "options": ["Sergio Leone", "John Ford", "Sam Peckinpah", "Howard Hawks"],
+            "answer": "Sergio Leone",
+            "hint": "Il maestro italiano del cinema western."
+        },
+        {
+            "id": 35,
+            "text": "Quale attrice interpreta la coraggiosa Katniss Everdeen nella saga cinematografica 'Hunger Games'?",
+            "options": ["Shailene Woodley", "Jennifer Lawrence", "Emma Watson", "Kristen Stewart"],
+            "answer": "Jennifer Lawrence",
+            "hint": "La ragazza di Fuoco e vincitrice dei giochi."
+        },
+        {
+            "id": 36,
+            "text": "In quale celebre film d'animazione Pixar i giocattoli prendono vita quando nessuno li osserva?",
+            "options": ["Cars", "Toy Story", "Up", "Ratatouille"],
+            "answer": "Toy Story",
+            "hint": "Con Woody e Buzz Lightyear."
+        },
+        {
+            "id": 37,
+            "text": "Quale acclamato regista di origini italiane ha diretto 'Taxi Driver' e 'Goodfellas'?",
+            "options": ["Martin Scorsese", "Francis Ford Coppola", "Brian De Palma", "Quentin Tarantino"],
+            "answer": "Martin Scorsese",
+            "hint": "Icona immortale del cinema gangster e drammatico."
+        },
+        {
+            "id": 38,
+            "text": "Come si chiama il computer di bordo della nave spaziale Nostromo nel film 'Alien'?",
+            "options": ["HAL 9000", "MOTHER", "JARVIS", "V.I.K.I."],
+            "answer": "MOTHER",
+            "hint": "Il sistema di controllo centrale della nave in cui viaggia Ripley."
+        },
+        {
+            "id": 39,
+            "text": "Quale serie TV post-apocalittica inizia con Rick Grimes che si risveglia in un ospedale deserto?",
+            "options": ["The 100", "The Walking Dead", "Fear the Walking Dead", "Z Nation"],
+            "answer": "The Walking Dead",
+            "hint": "Il mondo è invaso dai camminatori (zombie)."
+        },
+        {
+            "id": 40,
+            "text": "Quale attore interpreta il memorabile e candido protagonista nel film 'Forrest Gump' (1994)?",
+            "options": ["Tom Hanks", "Robin Williams", "Dustin Hoffman", "Harrison Ford"],
+            "answer": "Tom Hanks",
+            "hint": "La vita è come una scatola di cioccolatini."
+        },
+        {
+            "id": 41,
+            "text": "Chi ha diretto il film epico premio Oscar 'Il gladiatore' con protagonista Russell Crowe?",
+            "options": ["Ridley Scott", "Mel Gibson", "Oliver Stone", "Wolfgang Petersen"],
+            "answer": "Ridley Scott",
+            "hint": "Generale romano diventato schiavo e poi gladiatore al Colosseo."
+        },
+        {
+            "id": 42,
+            "text": "Qual è il nome della leggendaria nave spaziale pilotata da Han Solo in 'Star Wars'?",
+            "options": ["Millennium Falcon", "X-Wing", "Slave I", "TIE Fighter"],
+            "answer": "Millennium Falcon",
+            "hint": "Il mucchio di bulloni più veloce della galassia."
+        },
+        {
+            "id": 43,
+            "text": "Quale serie TV poliziesca ambientata a Baltimora è considerata una delle migliori di tutti i tempi?",
+            "options": ["The Wire", "The Shield", "True Detective", "Fargo"],
+            "answer": "The Wire",
+            "hint": "Analizza a fondo le istituzioni e il narcotraffico cittadino."
+        },
+        {
+            "id": 44,
+            "text": "Quale celebre regista giapponese ha diretto 'Il mio vicino Totoro' e 'Ponyo'?",
+            "options": ["Hayao Miyazaki", "Akira Kurosawa", "Mamoru Hosoda", "Satoshi Kon"],
+            "answer": "Hayao Miyazaki",
+            "hint": "Il co-fondatore dello Studio Ghibli."
+        },
+        {
+            "id": 45,
+            "text": "Quale attore interpreta l'enigmatico Tyler Durden nel cult movie 'Fight Club' (1999)?",
+            "options": ["Edward Norton", "Brad Pitt", "Jared Leto", "Christian Bale"],
+            "answer": "Brad Pitt",
+            "hint": "La prima regola del Fight Club è: non parlate mai del Fight Club."
+        },
+        {
+            "id": 46,
+            "text": "Come si chiama l'immaginaria cittadina montana in cui si svolge la serie cult 'Twin Peaks'?",
+            "options": ["Twin Peaks", "Riverdale", "Silent Hill", "Gravity Falls"],
+            "answer": "Twin Peaks",
+            "hint": "Chi ha ucciso Laura Palmer?"
+        },
+        {
+            "id": 47,
+            "text": "Quale film di Christopher Nolan vede la Terra morente e l'uso di un wormhole per trovare una nuova casa?",
+            "options": ["Interstellar", "Tenet", "Dunkirk", "The Prestige"],
+            "answer": "Interstellar",
+            "hint": "La gravità e l'amore trascendono le dimensioni spaziotemporali."
+        },
+        {
+            "id": 48,
+            "text": "Quale attore ha interpretato per l'ultima volta l'agente segreto James Bond nel film 'No Time to Die'?",
+            "options": ["Pierce Brosnan", "Daniel Craig", "Sean Connery", "Timothy Dalton"],
+            "answer": "Daniel Craig",
+            "hint": "Ha dato un volto moderno e tormentato a 007."
+        },
+        {
+            "id": 49,
+            "text": "Quale celebre e longeva serie animata creata da Matt Groening ha per protagonisti Homer e la sua famiglia?",
+            "options": ["I Griffin", "I Simpson", "Futurama", "South Park"],
+            "answer": "I Simpson",
+            "hint": "Vivono nella città di Springfield."
+        },
+        {
+            "id": 50,
+            "text": "Quale film del 1981 diretto da Steven Spielberg ha inaugurato le avventure dell'archeologo Indiana Jones?",
+            "options": ["I predatori dell'arca perduta", "Il tempio maledetto", "L'ultima crociata", "Il regno del teschio di cristallo"],
+            "answer": "I predatori dell'arca perduta",
+            "hint": "Il nostro eroe odia i serpenti."
+        }
+    ]
+}

@@ -1,0 +1,99 @@
+/* STREAMER PROFILE / BRANDING */
+.streamer-profile {
+    display: flex;
+    align-items: center;
+    position: relative;  
+    background: rgba(3, 7, 18, 0.5);
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 1px solid #00f3ff;
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.25);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo-placeholder {
+    position: absolute;
+    left: 20px;  
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, #7c3aed, #9146FF);
+    color: white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4em;
+    flex-shrink: 0;
+    border: 1px solid #00f3ff;
+}
+
+.streamer-info {
+    width: 100%;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.streamer-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    gap: 10px;
+    margin: 0 0 4px 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    line-height: 1.1;
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(0, 243, 255, 0.6);
+    animation: simplePulse 2s infinite ease-in-out;
+}
+
+.streamer-title img.title-logo {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(0, 243, 255, 0.8));
+    animation: simplePulse 2s infinite ease-in-out;
+}
+
+@keyframes simplePulse {
+    0%, 100% {
+        color: #ffffff;
+        text-shadow: 0 0 6px rgba(0, 243, 255, 0.4);
+    }
+    50% {
+        color: #e0ffff;
+        text-shadow: 0 0 16px rgba(0, 243, 255, 0.9), 0 0 25px rgba(0, 243, 255, 0.4);
+    }
+}
+
+.streamer-subtitle {
+    font-size: 0.9rem;
+    color: #00f3ff;
+    font-family: 'Share Tech Mono', monospace;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    font-weight: 600;
+    text-align: center; /* Centra il testo */
+}
+
+/* Styling and glow for the SVG logo in the login panel */
+.logo-placeholder img.brand-logo-svg {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(0, 243, 255, 0.7));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Slight zoom effect and enhanced glow on mouse hover */
+.logo-placeholder:hover img.brand-logo-svg {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 16px rgba(0, 243, 255, 1));
+}

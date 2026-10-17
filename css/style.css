@@ -1,0 +1,224 @@
+@import url('buttons.css');
+@import url('login.css');
+@import url('streamer.css');
+@import url('menu.css');
+@import url('wordle.css');
+@import url('hangman.css');
+@import url('nerd.css');
+@import url('scramble.css');
+@import url('quiz.css');
+@import url('sentence.css');
+@import url('memory.css');
+@import url('battleship.css');
+@import url('skribbl.css');
+@import url('true_crime.css');
+
+/* rajdhani-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/rajdhani-v17-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* rajdhani-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/rajdhani-v17-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* rajdhani-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/rajdhani-v17-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* share-tech-mono-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Share Tech Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/share-tech-mono-v16-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    background-color: #030712;
+    color: #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+#neon-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;  
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Eco Mode lightweight GPU-accelerated background & pulsing grid */
+body.eco-mode {
+    background-color: #060a17;
+}
+
+body.eco-mode::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    z-index: -2;
+    background-color: #060a17;
+    background-image: 
+        radial-gradient(circle at center, rgba(0, 162, 255, 0.25) 0%, rgba(6, 10, 23, 0) 75%),
+        linear-gradient(rgba(0, 243, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 243, 255, 0.08) 1px, transparent 1px);
+    background-size: 100% 100%, 45px 45px, 45px 45px;
+    animation: ecoGridPulse 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes ecoGridPulse {
+    0%, 100% {
+        opacity: 0.55;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Eco Mode Toggle Container */
+.eco-toggle-container {
+    margin: 12px 0 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.9em;
+    color: rgba(0, 243, 255, 0.8);
+}
+
+/* Override global input width specifically for this checkbox */
+.eco-toggle-container input[type="checkbox"] {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px;
+    margin: 0;
+    accent-color: #00f3ff;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Eco Mode Label Styling */
+.eco-toggle-container label {
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+}
+
+/* ANIMATION ENERGETIC BREATH */
+@keyframes cyberBreath {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(0, 243, 255, 0.15), inset 0 0 15px rgba(0, 243, 255, 0.05);
+        border-color: rgba(0, 243, 255, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 32px rgba(0, 243, 255, 0.35), inset 0 0 25px rgba(0, 243, 255, 0.12);
+        border-color: #00f3ff;
+    }
+}
+
+/* PANNELS / CARD HUD */
+.card {
+    /* background: rgba(8, 12, 22, 0.92); */
+	background: rgba(8, 12, 22, 0.5);
+    padding: 30px;
+    border: 1px solid #00f3ff;
+    width: 430px;/* 430px; */
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    gap: 22px;  
+    min-height: 480px;
+    clip-path: polygon(
+        0 12px, 12px 0, 
+        calc(100% - 12px) 0, 100% 12px, 
+        100% calc(100% - 12px), calc(100% - 12px) 100%, 
+        12px 100%, 0 calc(100% - 12px)
+    );
+    animation: cyberBreath 5s ease-in-out infinite;
+}
+
+.card::before {
+    content: "ARCADE_SYSTEM // READY";
+    position: absolute;
+    top: 6px;
+    right: 18px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.65em;
+    color: rgba(0, 243, 255, 0.6);
+    letter-spacing: 1.5px;
+}
+
+/* Hide "ARCADE_SYSTEM // READY" */
+.card.gameplay-active::before {
+    display: none !important;
+}
+
+input {
+    width: 100%;
+    padding: 12px 16px;
+    margin: 10px 0;
+    background: #000000;
+    border: 2px solid rgba(0, 243, 255, 0.4);
+    color: #00f3ff;
+    outline: none;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 1.25em;
+    letter-spacing: 1px;
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input::placeholder {
+    color: rgba(0, 243, 255, 0.35);
+    font-weight: 600;
+}
+
+input:focus {
+    border-color: #00f3ff;
+    background: rgba(0, 243, 255, 0.08);
+    box-shadow: 0 0 25px rgba(0, 243, 255, 0.6), inset 0 0 15px rgba(0, 243, 255, 0.25);
+}
+
+.hidden {
+    display: none !important;
+}
+

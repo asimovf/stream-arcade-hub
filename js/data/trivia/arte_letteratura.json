@@ -1,0 +1,355 @@
+{
+    "title": "Arte e Letteratura",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Chi ha scritto la Divina Commedia?",
+            "options": ["Petrarca", "Boccaccio", "Dante Alighieri", "Ariosto"],
+            "answer": "Dante Alighieri",
+            "hint": "Il Sommo Poeta."
+        },
+        {
+            "id": 2,
+            "text": "Chi ha dipinto la Gioconda?",
+            "options": ["Tiziano", "Leonardo da Vinci", "Botticelli", "Giotto"],
+            "answer": "Leonardo da Vinci",
+            "hint": "Al Louvre."
+        },
+        {
+            "id": 3,
+            "text": "In quale città è ambientata Romeo e Giulietta?",
+            "options": ["Venezia", "Roma", "Verona", "Firenze"],
+            "answer": "Verona",
+            "hint": "Città degli scaligeri."
+        },
+        {
+            "id": 4,
+            "text": "Chi ha scolpito il David di Firenze?",
+            "options": ["Donatello", "Michelangelo", "Bernini", "Canova"],
+            "answer": "Michelangelo",
+            "hint": "Capolavoro in marmo."
+        },
+        {
+            "id": 5,
+            "text": "Chi ha scritto I Promessi Sposi?",
+            "options": ["Manzoni", "Svevo", "Pirandello", "Leopardi"],
+            "answer": "Manzoni",
+            "hint": "Lago di Como."
+        },
+        {
+            "id": 6,
+            "text": "Quale autore ha scritto 'I Malavoglia'?",
+            "options": ["Verga", "Pascoli", "D'Annunzio", "Carducci"],
+            "answer": "Verga",
+            "hint": "Esponente del Verismo."
+        },
+        {
+            "id": 7,
+            "text": "Chi ha dipinto 'La persistenza della memoria' (gli orologi molli)?",
+            "options": ["Dalí", "Picasso", "Magritte", "Miró"],
+            "answer": "Dalí",
+            "hint": "Maestro del surrealismo."
+        },
+        {
+            "id": 8,
+            "text": "Quale poeta ha scritto l'Infinito?",
+            "options": ["Dante", "Petrarca", "Giacomo Leopardi", "Tasso"],
+            "answer": "Giacomo Leopardi",
+            "hint": "Scritto sul colle di Recanati."
+        },
+        {
+            "id": 9,
+            "text": "Chi è tradizionalmente considerato l'autore dell'Odissea?",
+            "options": ["Esiodo", "Omero", "Virgilio", "Sofocle"],
+            "answer": "Omero",
+            "hint": "Il grande aedo dell'antica Grecia."
+        },
+        {
+            "id": 10,
+            "text": "In quale famoso museo parigino è conservata la Venere di Milo?",
+            "options": ["Museo d'Orsay", "Centre Pompidou", "Louvre", "Museo Rodin"],
+            "answer": "Louvre",
+            "hint": "Si trova nel cuore di Parigi vicino alla Senna."
+        },
+        {
+            "id": 11,
+            "text": "Chi ha dipinto 'La Notte Stellata'?",
+            "options": ["Claude Monet", "Vincent van Gogh", "Paul Gauguin", "Edvard Munch"],
+            "answer": "Vincent van Gogh",
+            "hint": "Artista olandese post-impressionista."
+        },
+        {
+            "id": 12,
+            "text": "Quale autore ha scritto il romanzo 'Il fu Mattia Pascal'?",
+            "options": ["Italo Svevo", "Luigi Pirandello", "Gabriele D'Annunzio", "Italo Calvino"],
+            "answer": "Luigi Pirandello",
+            "hint": "Esplora i temi della maschera e dell'identità."
+        },
+        {
+            "id": 13,
+            "text": "Chi ha dipinto gli affreschi della volta della Cappella Sistina?",
+            "options": ["Raffaello", "Caravaggio", "Michelangelo Buonarroti", "Giotto"],
+            "answer": "Michelangelo Buonarroti",
+            "hint": "Genio del Rinascimento italiano."
+        },
+        {
+            "id": 14,
+            "text": "Chi ha scritto il celebre romanzo 'Cent'anni di solitudine'?",
+            "options": ["Gabriel García Márquez", "Mario Vargas Llosa", "Jorge Luis Borges", "Pablo Neruda"],
+            "answer": "Gabriel García Márquez",
+            "hint": "Massimo esponente del realismo magico."
+        },
+        {
+            "id": 15,
+            "text": "Quale scultore barocco ha realizzato il famoso 'Ratto di Proserpina'?",
+            "options": ["Gian Lorenzo Bernini", "Donatello", "Benvenuto Cellini", "Alessandro Algardi"],
+            "answer": "Gian Lorenzo Bernini",
+            "hint": "Le sue dita sembrano affondare nella carne di marmo."
+        },
+        {
+            "id": 16,
+            "text": "Chi ha scritto il romanzo distopico '1984'?",
+            "options": ["Aldous Huxley", "Ray Bradbury", "George Orwell", "H.G. Wells"],
+            "answer": "George Orwell",
+            "hint": "Il Grande Fratello ti osserva."
+        },
+        {
+            "id": 17,
+            "text": "Quale pittore ha fondato il Cubismo insieme a Pablo Picasso?",
+            "options": ["Henri Matisse", "Georges Braque", "Fernand Léger", "Juan Gris"],
+            "answer": "Georges Braque",
+            "hint": "Artista francese collaboratore di Picasso."
+        },
+        {
+            "id": 18,
+            "text": "Chi ha scritto 'Il piccolo principe'?",
+            "options": ["Antoine de Saint-Exupéry", "Jules Verne", "Victor Hugo", "Albert Camus"],
+            "answer": "Antoine de Saint-Exupéry",
+            "hint": "L'essenziale è invisibile agli occhi."
+        },
+        {
+            "id": 19,
+            "text": "Quale pittore ha realizzato il celebre dipinto cubista 'Guernica'?",
+            "options": ["Joan Miró", "Salvador Dalí", "Pablo Picasso", "Marc Chagall"],
+            "answer": "Pablo Picasso",
+            "hint": "Rappresenta il bombardamento dell'omonima città basca."
+        },
+        {
+            "id": 20,
+            "text": "Chi ha scritto il capolavoro realista 'Madame Bovary'?",
+            "options": ["Émile Zola", "Gustave Flaubert", "Stendhal", "Honoré de Balzac"],
+            "answer": "Gustave Flaubert",
+            "hint": "La protagonista vive a Tostes e Yonville."
+        },
+        {
+            "id": 21,
+            "text": "Chi ha dipinto la celebre allegoria de 'La Primavera' conservata agli Uffizi?",
+            "options": ["Sandro Botticelli", "Filippo Lippi", "Beato Angelico", "Perugino"],
+            "answer": "Sandro Botticelli",
+            "hint": "Celebre pittore fiorentino del Quattrocento."
+        },
+        {
+            "id": 22,
+            "text": "Quale tragediografo greco ha scritto 'Edipo re'?",
+            "options": ["Euripide", "Eschilo", "Sofocle", "Aristofane"],
+            "answer": "Sofocle",
+            "hint": "Tragedia incentrata sul famoso enigma e sul destino."
+        },
+        {
+            "id": 23,
+            "text": "Chi ha scritto il romanzo psicologico 'La coscienza di Zeno'?",
+            "options": ["Italo Svevo", "Umberto Saba", "Eugenio Montale", "Cesare Pavese"],
+            "answer": "Italo Svevo",
+            "hint": "Pubblicato a Trieste nel 1923."
+        },
+        {
+            "id": 24,
+            "text": "Quale pittore fiammingo ha dipinto 'La ragazza con l'orecchino di perlina'?",
+            "options": ["Jan van Eyck", "Johannes Vermeer", "Rembrandt van Rijn", "Pieter Bruegel"],
+            "answer": "Johannes Vermeer",
+            "hint": "Conosciuto anche come la Monna Lisa del Nord."
+        },
+        {
+            "id": 25,
+            "text": "Chi ha scritto la celebre raccolta poetica 'I fiori del male'?",
+            "options": ["Arthur Rimbaud", "Paul Verlaine", "Charles Baudelaire", "Stéphane Mallarmé"],
+            "answer": "Charles Baudelaire",
+            "hint": "Pioniere del decadentismo e del Simbolismo francese."
+        },
+        {
+            "id": 26,
+            "text": "Quale pittore impressionista è celebre per la serie di dipinti sulle 'Ninfee'?",
+            "options": ["Claude Monet", "Pierre-Auguste Renoir", "Camille Pissarro", "Edgar Degas"],
+            "answer": "Claude Monet",
+            "hint": "Ha immortalato il suo giardino a Giverny."
+        },
+        {
+            "id": 27,
+            "text": "Chi ha scritto il romanzo russo 'Delitto e castigo'?",
+            "options": ["Lev Tolstoj", "Fëdor Dostoevskij", "Anton Cechov", "Ivan Turgenev"],
+            "answer": "Fëdor Dostoevskij",
+            "hint": "La storia dello studente Raskol'nikov."
+        },
+        {
+            "id": 28,
+            "text": "Quale autore ha scritto 'Il ritratto di Dorian Gray'?",
+            "options": ["Charles Dickens", "Oscar Wilde", "Thomas Hardy", "Arthur Conan Doyle"],
+            "answer": "Oscar Wilde",
+            "hint": "Un ritratto che invecchia al posto del protagonista."
+        },
+        {
+            "id": 29,
+            "text": "Chi ha dipinto il celebre capolavoro barocco 'La ronda di notte'?",
+            "options": ["Jan Vermeer", "Frans Hals", "Rembrandt van Rijn", "Rubens"],
+            "answer": "Rembrandt van Rijn",
+            "hint": "Maestro olandese della luce e del chiaroscuro."
+        },
+        {
+            "id": 30,
+            "text": "Chi ha scritto il monumentale romanzo 'Anna Karenina'?",
+            "options": ["Fëdor Dostoevskij", "Lev Tolstoj", "Maksim Gorkij", "Boris Pasternak"],
+            "answer": "Lev Tolstoj",
+            "hint": "Inizia con la celebre frase sulle famiglie felici e infelici."
+        },
+        {
+            "id": 31,
+            "text": "Quale pittore italiano ha realizzato il celebre dipinto romantico 'Il bacio' (1859)?",
+            "options": ["Francesco Hayez", "Giovanni Fattori", "Telemaco Signorini", "Silvestro Lega"],
+            "answer": "Francesco Hayez",
+            "hint": "Massimo esponente del Romanticismo storico italiano."
+        },
+        {
+            "id": 32,
+            "text": "Chi ha scritto il poema cavalleresco 'Orlando furioso'?",
+            "options": ["Matteo Maria Boiardo", "Ludovico Ariosto", "Torquato Tasso", "Luigi Pulci"],
+            "answer": "Ludovico Ariosto",
+            "hint": "Vi si narra la pazzia del paladino per amore di Angelica."
+        },
+        {
+            "id": 33,
+            "text": "Chi ha dipinto l'iconica e angosciante opera 'L'urlo'?",
+            "options": ["Edvard Munch", "Gustav Klimt", "Egon Schiele", "Auguste Rodin"],
+            "answer": "Edvard Munch",
+            "hint": "Celebre pittore espressionista norvegese."
+        },
+        {
+            "id": 34,
+            "text": "Chi ha scritto l'epopea storica 'Guerra e pace'?",
+            "options": ["Lev Tolstoj", "Fëdor Dostoevskij", "Aleksandr Puškin", "Nikolaj Gogol'"],
+            "answer": "Lev Tolstoj",
+            "hint": "Ambientato durante le guerre napoleoniche."
+        },
+        {
+            "id": 35,
+            "text": "Quale scultore neoclassico ha realizzato il gruppo scultoreo 'Amore e Psiche'?",
+            "options": ["Antonio Canova", "Bertel Thorvaldsen", "John Flaxman", "Lorenzo Bartolini"],
+            "answer": "Antonio Canova",
+            "hint": "Rappresenta il tenero abbraccio tra il dio e la fanciulla."
+        },
+        {
+            "id": 36,
+            "text": "Chi ha scritto il celebre romanzo siciliano 'Il Gattopardo'?",
+            "options": ["Leonardo Sciascia", "Giuseppe Tomasi di Lampedusa", "Giovanni Verga", "Luigi Pirandello"],
+            "answer": "Giuseppe Tomasi di Lampedusa",
+            "hint": "'Se vogliamo che tutto rimanga come è, bisogna che tutto cambi'."
+        },
+        {
+            "id": 37,
+            "text": "Chi ha dipinto 'La libertà che guida il popolo'?",
+            "options": ["Eugène Delacroix", "Théodore Géricault", "Jacques-Louis David", "Jean-Auguste-Dominique Ingres"],
+            "answer": "Eugène Delacroix",
+            "hint": "Celebra la rivoluzione parigina del luglio 1830."
+        },
+        {
+            "id": 38,
+            "text": "Chi ha scritto il romanzo marinaresco 'Moby Dick'?",
+            "options": ["Mark Twain", "Herman Melville", "Jack London", "Edgar Allan Poe"],
+            "answer": "Herman Melville",
+            "hint": "La caccia ossessiva del capitano Achab alla balena bianca."
+        },
+        {
+            "id": 39,
+            "text": "Quale autore italiano ha scritto il bestseller 'Il nome della rosa'?",
+            "options": ["Italo Calvino", "Umberto Eco", "Alessandro Baricco", "Antonio Tabucchi"],
+            "answer": "Umberto Eco",
+            "hint": "Un giallo storico ambientato in un monastero medievale."
+        },
+        {
+            "id": 40,
+            "text": "Chi ha dipinto l'iconico quadro notturno 'Nottambuli' (Nighthawks)?",
+            "options": ["Edward Hopper", "Jackson Pollock", "Georgia O'Keeffe", "Grant Wood"],
+            "answer": "Edward Hopper",
+            "hint": "Rappresenta i clienti di una tavola calda americana aperta di notte."
+        },
+        {
+            "id": 41,
+            "text": "Chi ha scritto il romanzo breve 'Il vecchio e il mare'?",
+            "options": ["John Steinbeck", "Ernest Hemingway", "F. Scott Fitzgerald", "William Faulkner"],
+            "answer": "Ernest Hemingway",
+            "hint": "La lotta epica tra un vecchio pescatore e un grande marlin."
+        },
+        {
+            "id": 42,
+            "text": "Chi ha dipinto il celebre dipinto barocco 'La vocazione di San Matteo'?",
+            "options": ["Caravaggio", "Artemisia Gentileschi", "Guido Reni", "Annibale Carracci"],
+            "answer": "Caravaggio",
+            "hint": "Famoso per il taglio di luce drammatico nella penombra."
+        },
+        {
+            "id": 43,
+            "text": "Chi ha scritto il celebre romanzo 'I Miserabili'?",
+            "options": ["Alexandre Dumas", "Victor Hugo", "Honoré de Balzac", "Jules Verne"],
+            "answer": "Victor Hugo",
+            "hint": "Segue le vicende di Jean Valjean e Cosette."
+        },
+        {
+            "id": 44,
+            "text": "Chi ha dipinto 'La nascita di Venere' con la dea sulla conchiglia?",
+            "options": ["Sandro Botticelli", "Giotto", "Mantegna", "Piero della Francesca"],
+            "answer": "Sandro Botticelli",
+            "hint": "Uno dei capolavori assoluti conservati alla Galleria degli Uffizi."
+        },
+        {
+            "id": 45,
+            "text": "Chi ha scritto il romanzo gotico 'Frankenstein'?",
+            "options": ["Bram Stoker", "Mary Shelley", "Edgar Allan Poe", "Jane Austen"],
+            "answer": "Mary Shelley",
+            "hint": "Scritto durante un soggiorno sul Lago di Como e Ginevra."
+        },
+        {
+            "id": 46,
+            "text": "Quale pittore surrealista ha dipinto 'Il figlio dell'uomo' (l'uomo con la mela verde davanti al viso)?",
+            "options": ["René Magritte", "Max Ernst", "Yves Tanguy", "Joan Miró"],
+            "answer": "René Magritte",
+            "hint": "Celebre pittore belga dei cieli con le nuvole e i cappelli a bombetta."
+        },
+        {
+            "id": 47,
+            "text": "Chi ha scritto la celebre tragedia 'Amleto'?",
+            "options": ["Christopher Marlowe", "William Shakespeare", "Ben Jonson", "John Milton"],
+            "answer": "William Shakespeare",
+            "hint": "'Essere o non essere, questo è il problema'."
+        },
+        {
+            "id": 48,
+            "text": "Nel refettorio di quale chiesa milanese si trova il celebre murale de 'L'Ultima Cena' di Leonardo?",
+            "options": ["Santa Maria delle Grazie", "Basilica di Sant'Ambrogio", "Duomo di Milano", "San Lorenzo Maggiore"],
+            "answer": "Santa Maria delle Grazie",
+            "hint": "Uno dei capolavori mondiali del Rinascimento a Milano."
+        },
+        {
+            "id": 49,
+            "text": "Quale scrittore italiano ha scritto il romanzo fantastico 'Il barone rampante'?",
+            "options": ["Italo Calvino", "Dino Buzzati", "Alberto Moravia", "Cesare Pavese"],
+            "answer": "Italo Calvino",
+            "hint": "Fa parte della trilogia 'I nostri antenati'."
+        },
+        {
+            "id": 50,
+            "text": "Quale artista russo ha dipinto 'Quadrato nero' ed è stato pioniere del Suprematismo?",
+            "options": ["Kazimir Malevič", "Wassily Kandinsky", "Marc Chagall", "Aleksandr Rodčenko"],
+            "answer": "Kazimir Malevič",
+            "hint": "Una delle icone dell'arte astratta geometrica del Novecento."
+        }
+    ]
+}

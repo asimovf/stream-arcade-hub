@@ -1,0 +1,380 @@
+/* TRUE CRIME LAB */
+
+#truecrime-container:not(.hidden) {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    width: 480px !important;
+    max-width: 98vw !important;
+    max-height: 96vh !important;
+    box-sizing: border-box;
+    padding: 20px !important;
+    background: rgba(8, 12, 22, 0.5) !important;
+    color: #f4f4f5;
+    font-family: 'Rajdhani', sans-serif;
+    overflow-y: auto !important;
+    margin: auto !important;
+    align-self: center !important;
+    border: 2px solid #00f3ff; 
+    box-shadow: 0 0 45px rgba(0, 243, 255, 0.4), inset 0 0 25px rgba(0, 243, 255, 0.12); 
+    clip-path: none;
+    transition: width 0.25s ease-in-out;
+}
+
+#truecrime-container.gameplay-active {
+    width: 1250px !important;
+    max-height: 98vh !important;
+    /* Compact top padding to keep header high, optimized bottom padding to prevent bottom clipping */
+    padding: 12px 20px 10px 20px !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 5px !important;
+    animation: crimeSuspensePulse 1.8s infinite alternate ease-in-out;
+}
+
+@keyframes crimeSuspensePulse {
+    0% {
+        border-color: #00f3ff;
+        box-shadow: 0 0 35px rgba(0, 243, 255, 0.3), inset 0 0 20px rgba(0, 243, 255, 0.1);
+    }
+    100% {
+        border-color: #ff007f; 
+        box-shadow: 0 0 65px rgba(255, 0, 127, 0.7), inset 0 0 30px rgba(255, 0, 127, 0.25);
+    }
+}
+
+/* Setup and gameplay block visibility management */
+#truecrime-setup:not(.hidden) {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 15px !important;
+}
+
+#truecrime-gameplay:not(.hidden) {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 4px !important;
+    margin-top: 0 !important;
+}
+
+/* TOP HUD HEADER: Clean, compact, and positioned high up */
+.tc-header-info {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    background: rgba(3, 7, 18, 0.95) !important;
+    border: 1px solid rgba(0, 243, 255, 0.4) !important;
+    padding: 6px 14px !important;
+    border-radius: 6px !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    color: #00f3ff !important;
+    font-size: 1.15rem !important;
+    margin-top: 0 !important;
+    margin-bottom: 4px !important;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8) !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    white-space: nowrap !important;
+}
+
+#truecrime-category-info {
+    white-space: nowrap !important;
+    letter-spacing: 2px;
+    font-size: 1.15rem;
+    color: #00f3ff;
+    font-weight: bold;
+    border: 1px solid rgba(0, 243, 255, 0.4);
+    padding: 2px 10px;
+    border-radius: 4px;
+    background: rgba(0, 243, 255, 0.05);
+}
+
+.tc-timer {
+    font-family: 'Share Tech Mono', monospace;
+    background: rgba(255, 0, 127, 0.25) !important;
+    color: #ff70b5 !important;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1.1rem; 
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.4);
+    border: 1px solid #ff007f;
+    flex-shrink: 0;
+}
+
+/* Victim row layout */
+.tc-victim-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(0, 0, 0, 0.95) !important;
+    border: 1px solid rgba(241, 196, 15, 0.5) !important;
+    border-left: 5px solid #f1c40f !important;
+    padding: 8px 12px !important;
+    border-radius: 6px !important;
+    margin-bottom: 6px !important;
+    text-align: left; 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tc-victim-img {
+    width: 42px;
+    height: 42px;
+    border-radius: 4px;
+    object-fit: cover;
+    border: 2px solid #f1c40f;
+}
+
+.tc-case-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1px;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.tc-case-text {
+    font-size: 1.05rem;
+    color: #fef08a;
+    font-weight: 600;
+}
+
+/* Evidence box layout */
+.tc-evidence-box {
+    margin-top: 0 !important;
+    padding: 8px 12px !important;
+    background: rgba(0, 0, 0, 0.95) !important;
+    border: 1px solid rgba(231, 76, 60, 0.5) !important;
+    border-left: 5px solid #d10f29 !important;
+    border-radius: 6px !important;
+    display: flex !important;
+    gap: 12px !important;
+    align-items: center !important;
+    margin-bottom: 4px !important;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* .tc-evidence-img {
+    width: 28px !important;
+    height: 28px !important;
+    object-fit: contain;
+} */
+
+.tc-evidence-img {
+    width: 42px;
+    height: 42px;
+    border-radius: 2px;
+    object-fit: cover;
+    border: 1px solid #ed324b;
+}
+
+.tc-evidence-label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.8rem !important;
+    color: #ff4d6d !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 2px;
+    /* High contrast text-shadow with deep black border and strong neon pop */
+    text-shadow: 2px 2px 0px #000000, -1px -1px 0px #000000, 0 0 10px rgba(255, 77, 109, 0.8);
+}
+
+.tc-evidence-desc {
+    font-size: 1.1rem !important;
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+/* Suspect cards grid */
+.tc-suspects-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 10px !important;
+    margin-bottom: 4px !important;
+    width: 100% !important;
+}
+
+.tc-suspect-card {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(15, 23, 42, 0.95) !important;
+    padding: 8px 10px !important;
+    border-radius: 6px !important;
+    border: 1px solid rgba(0, 243, 255, 0.35) !important;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease-in-out !important;
+}
+
+/* Dim non-culprit suspect cards automatically once the culprit card is highlighted */
+.tc-suspects-grid:has(.tc-suspect-card[style*="border"]) .tc-suspect-card:not([style*="border"]) {
+    opacity: 0.35 !important;
+    filter: grayscale(0.6) !important;
+    transform: scale(0.98);
+}
+
+/* Enhance the culprit card when highlighted */
+.tc-suspect-card[style*="border"] {
+    transform: scale(1.02);
+    z-index: 2;
+}
+
+.tc-suspect-img {
+    width: 52px;
+    height: 52px;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 2px solid rgba(0, 243, 255, 0.6);
+    margin-bottom: 4px;
+}
+
+.tc-suspect-name {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.25rem !important;
+    margin-bottom: 2px;
+}
+
+.tc-suspect-role {
+    color: #ffe600; 
+    font-size: 1.05rem !important;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.tc-suspect-alibi {
+    color: #e2e8f0 !important;
+    font-size: 1rem !important;
+    line-height: 1.3;
+    margin: 3px 0;
+    padding: 5px 7px;
+    background: rgba(0, 243, 255, 0.06);
+    border-left: 3px solid #00f3ff;
+    text-align: left;
+    border-radius: 0 4px 4px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tc-suspect-alibi::before {
+    content: "ALIBI: ";
+    color: #00f3ff !important;
+    font-weight: bold;
+    display: block;
+    font-size: 0.7rem;
+    font-family: 'Share Tech Mono', monospace;
+    letter-spacing: 0.5px;
+}
+
+.tc-suspect-gear {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tc-gear-item {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.95rem !important;
+    background: rgba(3, 7, 18, 0.95) !important;
+    padding: 5px 7px !important;
+    border-radius: 4px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tc-gear-tool {
+    border: 1px solid rgba(0, 243, 255, 0.45) !important;
+    color: #38bdf8 !important;
+}
+
+.tc-gear-tool::before {
+    content: "🛠 STRUMENTO:";
+    color: #00f3ff !important;
+    font-size: 0.65rem;
+    font-weight: bold;
+}
+
+.tc-gear-material {
+    border: 1px solid rgba(74, 222, 128, 0.45) !important;
+    color: #4ade80 !important;
+}
+
+.tc-gear-material::before {
+    content: "🧪 TRACCIA:";
+    color: #22c55e !important;
+    font-size: 0.65rem;
+    font-weight: bold;
+}
+
+.tc-suspect-info {
+    width: 100%;
+}
+
+/* Chat interaction boxes fully visible at the bottom */
+.tc-command-box {
+    margin-top: 2px;
+    background: rgba(145, 70, 255, 0.15);
+    border: 1px solid #9146FF;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.1rem !important;
+    color: #d8b4fe;
+    text-align: center;
+    width: 100%;
+}
+
+.tc-status-box {
+    margin-top: 4px !important;
+    padding: 4px 0 !important;
+    width: 100% !important;
+    box-sizing: border-box;
+}
+
+.tc-feed-box {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem !important;
+    margin-top: 2px;
+    background: rgba(3, 7, 18, 0.9);
+    border: 1px solid rgba(0, 243, 255, 0.3);
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: #00f3ff;
+    width: 100%;
+}
+
+.tc-btn-primary {
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.15em;
+    cursor: pointer;
+}
+
+.tc-back-btn {
+    width: 100%;
+    margin-top: 2px;
+}
+

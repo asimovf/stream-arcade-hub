@@ -1,0 +1,605 @@
+{
+  "title": "Completa la Frase",
+  "sentences": [
+    {
+      "id": 1,
+      "text": "Nel mezzo del cammin di nostra vita mi ritrovai per una selva oscura, che la ________ via era smarrita.",
+      "answer": "DIRITTA",
+      "hint": "Canto I dell'Inferno di Dante."
+    },
+    {
+      "id": 2,
+      "text": "E quindi uscii a riveder le ________.",
+      "answer": "STELLE",
+      "hint": "La celebre chiusura dell'Inferno dantesco."
+    },
+    {
+      "id": 3,
+      "text": "Errare è umano, ________ è diabolico.",
+      "answer": "PERSEVERARE",
+      "hint": "Un noto proverbio latino sulla ripetizione degli errori."
+    },
+    {
+      "id": 4,
+      "text": "Chi trova un amico trova un ________.",
+      "answer": "TESORO",
+      "hint": "Un antico detto popolare sul valore dell'amicizia."
+    },
+    {
+      "id": 5,
+      "text": "Non è tutto oro quel che ________.",
+      "answer": "LUCE",
+      "hint": "Attenzione: la parola chiave indica ciò che brilla o riluce!"
+    },
+    {
+      "id": 6,
+      "text": "Gallina vecchia fa buon ________.",
+      "answer": "BRODO",
+      "hint": "Un classico proverbio sulla saggezza dell'esperienza."
+    },
+    {
+      "id": 7,
+      "text": "Chi dorme non piglia ________.",
+      "answer": "PESCI",
+      "hint": "Chi non si dà da fare perde le occasioni."
+    },
+    {
+      "id": 8,
+      "text": "Questo matrimonio s'ha ________ da fare né domani, né mai.",
+      "answer": "NÉ",
+      "hint": "Celebre frase tratta dai Promessi Sposi di Manzoni."
+    },
+    {
+      "id": 9,
+      "text": "Il lupo perde il pelo ma non il ________.",
+      "answer": "VIZIO",
+      "hint": "Le abitudini radicate sono difficili da sradicare."
+    },
+    {
+      "id": 10,
+      "text": "A caval donato non si guarda in ________.",
+      "answer": "BOCCA",
+      "hint": "Non bisogna criticare ciò che si riceve in regalo."
+    },
+    {
+      "id": 11,
+      "text": "Chi va piano va sano e va ________.",
+      "answer": "LONTANO",
+      "hint": "La prudenza e la costanza premiano sempre."
+    },
+    {
+      "id": 12,
+      "text": "Ride bene chi ride ________.",
+      "answer": "ULTIMO",
+      "hint": "Non bisogna cantare vittoria troppo presto."
+    },
+    {
+      "id": 13,
+      "text": "Meglio un uovo oggi che una gallina ________.",
+      "answer": "DOMANI",
+      "hint": "Meglio accontentarsi di ciò che si ha subito."
+    },
+    {
+      "id": 14,
+      "text": "Tra moglie e marito non mettere il ________.",
+      "answer": "DITO",
+      "hint": "È meglio non intromettersi nelle questioni di coppia."
+    },
+    {
+      "id": 15,
+      "text": "Il mattino ha l'oro in ________.",
+      "answer": "BOCCA",
+      "hint": "Chi si sveglia presto sfrutta al meglio la giornata."
+    },
+    {
+      "id": 16,
+      "text": "A buon intenditor poche ________.",
+      "answer": "PAROLE",
+      "hint": "A chi capisce al volo bastano pochi cenni."
+    },
+    {
+      "id": 17,
+      "text": "Chi fa da sé fa per ________.",
+      "answer": "TRE",
+      "hint": "L'indipendenza e l'autosufficienza nei lavori."
+    },
+    {
+      "id": 18,
+      "text": "Can che abbaia non ________.",
+      "answer": "MORDE",
+      "hint": "Spesso chi minaccia molto non è pericoloso."
+    },
+    {
+      "id": 19,
+      "text": "L'occasione fa l'uomo ________.",
+      "answer": "LADRO",
+      "hint": "La circostanza favorevole può spingere a compiere azioni scorrette."
+    },
+    {
+      "id": 20,
+      "text": "Paese che vai, ________ che trovi.",
+      "answer": "USANZE",
+      "hint": "Ogni luogo ha le sue tradizioni e abitudini."
+    },
+    {
+      "id": 21,
+      "text": "Non rimandare a domani quello che potresti fare ________.",
+      "answer": "OGGI",
+      "hint": "Il valore della tempestività e dell'efficienza."
+    },
+    {
+      "id": 22,
+      "text": "Chi tardi arriva male ________.",
+      "answer": "ALLOGGIA",
+      "hint": "Arrivare in ritardo comporta disagi o sistemazioni peggiori."
+    },
+    {
+      "id": 23,
+      "text": "Tale padre, tale ________.",
+      "answer": "FIGLIO",
+      "hint": "La somiglianza di carattere o comportamento tra generazioni."
+    },
+    {
+      "id": 24,
+      "text": "Rosso di sera, bel tempo si ________.",
+      "answer": "SPERA",
+      "hint": "Antico detto meteorologico popolare."
+    },
+    {
+      "id": 25,
+      "text": "Ogni promessa è un ________.",
+      "answer": "DEBITO",
+      "hint": "Ciò che viene promesso deve essere mantenuto."
+    },
+    {
+      "id": 26,
+      "text": "Chi pecora si fa, il lupo se la ________.",
+      "answer": "MANGIA",
+      "hint": "Chi si mostra troppo debole finisce per essere sfruttato."
+    },
+    {
+      "id": 27,
+      "text": "Sbagliando s'________.",
+      "answer": "IMPARA",
+      "hint": "Gli errori sono parte fondamentale del processo di apprendimento."
+    },
+    {
+      "id": 28,
+      "text": "Chi semina vento raccoglie ________.",
+      "answer": "TEMPESTA",
+      "hint": "Le azioni sconsiderate portano a conseguenze gravi."
+    },
+    {
+      "id": 29,
+      "text": "L'abito non fa il ________.",
+      "answer": "MONACO",
+      "hint": "Non bisogna giudicare le persone dalle apparenze esteriori."
+    },
+    {
+      "id": 30,
+      "text": "Patti chiari, amicizia ________.",
+      "answer": "LUNGA",
+      "hint": "La chiarezza nei rapporti previene i malintesi."
+    },
+    {
+      "id": 31,
+      "text": "Mors tua, vita ________.",
+      "answer": "SUA",
+      "hint": "Celebre locuzione latina sulla competizione."
+    },
+    {
+      "id": 32,
+      "text": "Finché c'è vita c'è ________.",
+      "answer": "SPERANZA",
+      "hint": "Non bisogna mai arrendersi finché si ha fiato."
+    },
+    {
+      "id": 33,
+      "text": "Acqua cheta rompe i ________.",
+      "answer": "PONTI",
+      "hint": "Chi sembra tranquillo può riservare grandi sorprese."
+    },
+    {
+      "id": 34,
+      "text": "Erba cattiva non muore ________.",
+      "answer": "MAI",
+      "hint": "I guai o le persone moleste sembrano durare in eterno."
+    },
+    {
+      "id": 35,
+      "text": "Chi sputa in cielo in faccia gli ________.",
+      "answer": "TORNA",
+      "hint": "Le cattive azioni o i gesti arroganti si ripercuotono su chi li compie."
+    },
+    {
+      "id": 36,
+      "text": "La gatta frettolosa fece i gattini ________.",
+      "answer": "CIECHI",
+      "hint": "La troppa fretta porta a risultati imperfetti o disastrosi."
+    },
+    {
+      "id": 37,
+      "text": "Mal comune, mezzo ________.",
+      "answer": "GAUDIO",
+      "hint": "La condivisione di un dispiacere sembra attenuarlo."
+    },
+    {
+      "id": 38,
+      "text": "Tra il dire e il fare c'è di mezzo il ________.",
+      "answer": "MARE",
+      "hint": "Passare dalle parole ai fatti è spesso molto difficile."
+    },
+    {
+      "id": 39,
+      "text": "Morto un papa, se ne fa un ________.",
+      "answer": "ALTRO",
+      "hint": "Nessuna persona o situazione è veramente insostituibile."
+    },
+    {
+      "id": 40,
+      "text": "Chi disprezza vuol ________.",
+      "answer": "COMPRARE",
+      "hint": "Critico simulato per sminuire il valore di qualcosa."
+    },
+    {
+      "id": 41,
+      "text": "Non dire gatto se non ce l'hai nel ________.",
+      "answer": "SACCO",
+      "hint": "Celebre massima sportiva di Giovanni Trapattoni."
+    },
+    {
+      "id": 42,
+      "text": "Chi cerca ________.",
+      "answer": "TROVA",
+      "hint": "La perseveranza nella ricerca porta sempre a risultati."
+    },
+    {
+      "id": 43,
+      "text": "A tutto c'è rimedio tranne che alla ________.",
+      "answer": "MORTE",
+      "hint": "L'unico evento definitivo e immutabile."
+    },
+    {
+      "id": 44,
+      "text": "Chi rompe paga e i cocci sono ________.",
+      "answer": "SUOI",
+      "hint": "La responsabilità civile e materiale dei danni."
+    },
+    {
+      "id": 45,
+      "text": "Chi ha pane non ha denti, chi ha ________ non ha pane.",
+      "answer": "DENTI",
+      "hint": "L'ironia della sorte nelle risorse a disposizione."
+    },
+    {
+      "id": 46,
+      "text": "I panni sporchi si lavano in ________.",
+      "answer": "FAMIGLIA",
+      "hint": "I problemi privati vanno risolti lontano da occhi indiscreti."
+    },
+    {
+      "id": 47,
+      "text": "O mangi questa minestra o ti ________.",
+      "answer": "BUTTI",
+      "hint": "Espressione popolare per indicare un aut aut inevitabile."
+    },
+    {
+      "id": 48,
+      "text": "Chi va con lo zoppo impara a ________.",
+      "answer": "ZOPPICARE",
+      "hint": "Subiamo l'influenza delle compagnie che frequentiamo."
+    },
+    {
+      "id": 49,
+      "text": "Gallina che canta ha fatto ________.",
+      "answer": "L'UOVO",
+      "hint": "Chi si tradisce da solo facendo proclami."
+    },
+    {
+      "id": 50,
+      "text": "Chi semina amore raccoglie ________.",
+      "answer": "GIOIA",
+      "hint": "La positività e la bontà tornano sempre indietro."
+    },
+    {
+      "id": 51,
+      "text": "Un ragazzo perbene non dice mai bugie, specialmente quando le bugie hanno le gambe ________.",
+      "answer": "CORTE",
+      "hint": "Citazione classica da Le avventure di Pinocchio di Collodi."
+    },
+    {
+      "id": 52,
+      "text": "Sempre caro mi fu quest'ermo ________.",
+      "answer": "COLLE",
+      "hint": "L'incipit de L'infinito di Giacomo Leopardi."
+    },
+    {
+      "id": 53,
+      "text": "Celeste è questa corrispondenza d'amorosi ________.",
+      "answer": "SENSI",
+      "hint": "Tratto dai Sepolcri di Ugo Foscolo."
+    },
+    {
+      "id": 54,
+      "text": "Solo e pensoso i più deserti ________.",
+      "answer": "CAMPI",
+      "hint": "Celebre sonetto di Francesco Petrarca."
+    },
+    {
+      "id": 55,
+      "text": "San Martino: spumeggia il mosto sui ________.",
+      "answer": "TINI",
+      "hint": "Dalla celebre poesia di Giosuè Carducci."
+    },
+    {
+      "id": 56,
+      "text": "Nella nevicata appare improvvisa la cavalla ________.",
+      "answer": "STORNA",
+      "hint": "Riferimento alla poesia La cavalla storna di Giovanni Pascoli."
+    },
+    {
+      "id": 57,
+      "text": "Uno, nessuno e ________.",
+      "answer": "CENTOMILA",
+      "hint": "Il capolavoro letterario firmato da Luigi Pirandello."
+    },
+    {
+      "id": 58,
+      "text": "I Malavoglia e la famosa casa del ________.",
+      "answer": "NESPOLO",
+      "hint": "Il pilastro del verismo italiano scritto da Giovanni Verga."
+    },
+    {
+      "id": 59,
+      "text": "La coscienza di Zeno e il tentativo continuo di smettere di ________.",
+      "answer": "FUMO",
+      "hint": "Il celebre romanzo psicologico di Italo Svevo."
+    },
+    {
+      "id": 60,
+      "text": "Il barone rampante che decise di vivere sugli ________.",
+      "answer": "ALBERI",
+      "hint": "Una delle opere più iconiche di Italo Calvino."
+    },
+    {
+      "id": 61,
+      "text": "Il giorno della ________.",
+      "answer": "CIVETTA",
+      "hint": "Il celebre romanzo d'inchiesta di Leonardo Sciascia."
+    },
+    {
+      "id": 62,
+      "text": "Il nome della rosa e il mistero del ________.",
+      "answer": "DELITTO",
+      "hint": "Il capolavoro narrativo e semiologico di Umberto Eco."
+    },
+    {
+      "id": 63,
+      "text": "La teoria della relatività unisce lo spazio e il ________.",
+      "answer": "TEMPO",
+      "hint": "Il concetto fondamentale introdotto da Albert Einstein."
+    },
+    {
+      "id": 64,
+      "text": "Eppur si ________.",
+      "answer": "MUOVE",
+      "hint": "La celebre frase attribuita a Galileo Galilei di fronte al tribunale."
+    },
+    {
+      "id": 65,
+      "text": "Se ho visto più lontano è perché stavo sulle spalle di ________.",
+      "answer": "GIGANTI",
+      "hint": "La famosa citazione scientifica di Isaac Newton."
+    },
+    {
+      "id": 66,
+      "text": "Datemi un punto d'appoggio e solleverò il ________.",
+      "answer": "MONDO",
+      "hint": "Il principio della leva formulato da Archimede."
+    },
+    {
+      "id": 67,
+      "text": "Cogito, ergo ________.",
+      "answer": "SUM",
+      "hint": "Il pilastro filosofico cartesiano per eccellenza."
+    },
+    {
+      "id": 68,
+      "text": "Alea iacta ________.",
+      "answer": "EST",
+      "hint": "La frase pronunciata da Giulio Cesare al passaggio del Rubicone."
+    },
+    {
+      "id": 69,
+      "text": "Labor omnia ________.",
+      "answer": "VINCIT",
+      "hint": "Celebre locuzione virgiliana sulla dedizione e il lavoro."
+    },
+    {
+      "id": 70,
+      "text": "Carpe ________.",
+      "answer": "DIEM",
+      "hint": "L'invito oraziano a cogliere l'attimo presente."
+    },
+    {
+      "id": 71,
+      "text": "Errare humanum est, perseverare ________.",
+      "answer": "DIABOLICUM",
+      "hint": "La continuazione del celebre proverbio latino sugli errori."
+    },
+    {
+      "id": 72,
+      "text": "Veni, vidi, ________.",
+      "answer": "VICI",
+      "hint": "La rapida comunicazione di vittoria di Giulio Cesare."
+    },
+    {
+      "id": 73,
+      "text": "Un'opera colossale ma isolata viene spesso definita una cattedrale nel ________.",
+      "answer": "DESERTO",
+      "hint": "Metafora comune per progetti faraonici incompiuti o sproporzionati."
+    },
+    {
+      "id": 74,
+      "text": "Essere o non essere, questo è il ________.",
+      "answer": "DILEMMA",
+      "hint": "Il famosissimo soliloquio dell'Amleto di William Shakespeare."
+    },
+    {
+      "id": 75,
+      "text": "Houston, abbiamo un ________.",
+      "answer": "PROBLEMA",
+      "hint": "La celeberrima frase radiofonica della missione Apollo 13."
+    },
+    {
+      "id": 76,
+      "text": "Che la forza sia con ________.",
+      "answer": "TE",
+      "hint": "Il leggendario saluto della saga di Star Wars."
+    },
+    {
+      "id": 77,
+      "text": "Elementare, mio caro ________.",
+      "answer": "WATSON",
+      "hint": "La celebre deduzione attribuita a Sherlock Holmes."
+    },
+    {
+      "id": 78,
+      "text": "Il primo comandamento dei sistemi informatici: se funziona, non lo ________.",
+      "answer": "TOCCARE",
+      "hint": "La regola d'oro di ogni sviluppatore e sysadmin."
+    },
+    {
+      "id": 79,
+      "text": "In un sistema complesso, il caos è spesso solo ordine non ancora ________.",
+      "answer": "COMPRESO",
+      "hint": "Una riflessione sulla fisica dei sistemi dinamici."
+    },
+    {
+      "id": 80,
+      "text": "La termodinamica ci insegna che l'entropia tende sempre ad ________.",
+      "answer": "AUMENTARE",
+      "hint": "Il secondo principio della termodinamica."
+    },
+    {
+      "id": 81,
+      "text": "Nel modello atomico standard, il nucleo è circondato da ________.",
+      "answer": "ELETTRONI",
+      "hint": "Le particelle subatomiche con carica negativa."
+    },
+    {
+      "id": 82,
+      "text": "La velocità di propagazione della luce nel vuoto è una costante ________.",
+      "answer": "UNIVERSALE",
+      "hint": "Uno dei capisaldi della fisica moderna."
+    },
+    {
+      "id": 83,
+      "text": "L'accelerazione di gravità sulla superficie terrestre si misura in metri al secondo ________.",
+      "answer": "QUADRATO",
+      "hint": "L'unità di misura dell'accelerazione."
+    },
+    {
+      "id": 84,
+      "text": "La celebre equazione di Einstein stabilisce l'equivalenza tra massa ed ________.",
+      "answer": "ENERGIA",
+      "hint": "La formula E = mc²."
+    },
+    {
+      "id": 85,
+      "text": "Nel sistema solare, il pianeta roccioso più vicino alla nostra stella è ________.",
+      "answer": "MERCURIO",
+      "hint": "Il primo pianeta in ordine di distanza dal Sole."
+    },
+    {
+      "id": 86,
+      "text": "La molecola del DNA è strutturata sotto forma di doppia ________.",
+      "answer": "ELICA",
+      "hint": "La celebre conformazione scoperta da Watson e Crick."
+    },
+    {
+      "id": 87,
+      "text": "Una stella di neutroni è il residuo estremamente denso di una supernova ________.",
+      "answer": "MASSICCIA",
+      "hint": "Il ciclo vitale delle stelle di grande massa."
+    },
+    {
+      "id": 88,
+      "text": "Il bosone di Higgs è popolarmente noto come la particella di ________.",
+      "answer": "DIO",
+      "hint": "La particella responsabile della massa nel Modello Standard."
+    },
+    {
+      "id": 89,
+      "text": "La forza di gravità diminuisce proporzionalmente al ________ della distanza tra i corpi.",
+      "answer": "QUADRATO",
+      "hint": "La legge di gravitazione universale di Newton."
+    },
+    {
+      "id": 90,
+      "text": "Lo zero assoluto corrisponde alla temperatura teorica di meno duecentosettantatre virgola quindici gradi ________.",
+      "answer": "CELSIUS",
+      "hint": "Il limite inferiore della scala termodinamica."
+    },
+    {
+      "id": 91,
+      "text": "Nel rigoroso metodo scientifico, ogni teoria deve essere validata tramite ________.",
+      "answer": "ESPERIMENTI",
+      "hint": "La prova empirica fondamentale della scienza."
+    },
+    {
+      "id": 92,
+      "text": "L'analisi forense dei profili biologici permette di identificare tracce di DNA con estrema ________.",
+      "answer": "PRECISIONE",
+      "hint": "Un pilastro fondamentale delle indagini medico-legali."
+    },
+    {
+      "id": 93,
+      "text": "Un database relazionale struttura le informazioni in tabelle composte da righe e ________.",
+      "answer": "COLONNE",
+      "hint": "La struttura tabulare standard dei dati."
+    },
+    {
+      "id": 94,
+      "text": "Nei linguaggi di scripting moderni, le strutture dati sequenziali flessibili vengono chiamate ________.",
+      "answer": "LISTE",
+      "hint": "Struttura dati fondamentale in Python e simili."
+    },
+    {
+      "id": 95,
+      "text": "Per applicare con successo un algoritmo di ricerca binaria, l'archivio deve essere preventivamente ________.",
+      "answer": "ORDINATO",
+      "hint": "La condizione logica preliminare per la ricerca dicotomica."
+    },
+    {
+      "id": 96,
+      "text": "I sistemi crittografici simmetrici adoperano la medesima chiave segreta sia per la cifratura che per la ________.",
+      "answer": "DECIFRATURA",
+      "hint": "Il processo inverso di lettura dei dati protetti."
+    },
+    {
+      "id": 97,
+      "text": "I modelli di intelligenza artificiale apprendono estraendo pattern complessi da enormi dataset di ________.",
+      "answer": "ADDESTRAMENTO",
+      "hint": "Il carburante fondamentale del machine learning."
+    },
+    {
+      "id": 98,
+      "text": "La programmazione orientata agli oggetti sfrutta pilastri fondamentali come l'incapsulamento e il ________.",
+      "answer": "POLIMORFISMO",
+      "hint": "Un concetto chiave dell'architettura software OOP."
+    },
+    {
+      "id": 99,
+      "text": "Una socket di rete WebSocket garantisce una comunicazione bidirezionale e persistente tra client e ________.",
+      "answer": "SERVER",
+      "hint": "L'architettura client-server in tempo reale."
+    },
+    {
+      "id": 100,
+      "text": "Stream Arcade Hub è la piattaforma definitiva per gestire i minigiochi nella chat di ________.",
+      "answer": "TWITCH",
+      "hint": "Il nome della celebre piattaforma di streaming live."
+    }
+  ]
+}

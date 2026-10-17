@@ -1,0 +1,205 @@
+/* SKRIBBL */
+
+/* Compact card layout fitting perfectly on screen without unnecessary scrolling */
+#skribbl-container:not(.hidden) {
+    width: 780px !important;
+    max-width: 95vw !important;
+    min-height: 720px !important;
+    background: rgba(8, 12, 22, 0.5) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding: 25px 35px !important;
+    gap: 12px !important;
+    margin: 0 auto !important;
+    animation: wordleNeonPulse 4s ease-in-out infinite !important;
+    box-sizing: border-box !important;
+}
+
+#skribbl-container h2 {
+    font-size: 1.6em !important;
+    letter-spacing: 2px !important;
+    margin: 0 0 5px 0 !important;
+    color: #00f3ff !important;
+    text-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+}
+
+#skribbl-setup:not(.hidden) {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    padding: 30px 0 !important;
+    text-align: center;
+}
+
+.skribbl-setup-btn {
+    width: 280px !important;
+    padding: 10px 20px !important;
+    font-weight: bold !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    letter-spacing: 1px !important;
+}
+
+#skribbl-gameplay:not(.hidden) {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.skribbl-canvas-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+}
+
+#skribbl-canvas {
+    width: 640px !important;
+    height: 260px !important;
+    border: 2px solid rgba(0, 243, 255, 0.4) !important;
+    border-radius: 6px !important;
+    background: #ffffff !important;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.1) !important;
+    cursor: crosshair !important;
+}
+
+.skribbl-toolbar {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 640px !important;
+    background: rgba(3, 7, 18, 0.85) !important;
+    padding: 6px 10px !important;
+    border-radius: 6px !important;
+    border: 1px solid rgba(0, 243, 255, 0.25) !important;
+    box-sizing: border-box !important;
+}
+
+.tool-group {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+}
+
+.swatch {
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 4px !important;
+    border: 2px solid transparent !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+.swatch.active {
+    border-color: #00f3ff !important;
+    transform: scale(1.1) !important;
+    box-shadow: 0 0 8px rgba(0, 243, 255, 0.6) !important;
+}
+
+/* Custom Styled Color Picker Button Wrapper */
+.color-picker-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    background: linear-gradient(135deg, #ff007f, #00f3ff);
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 243, 255, 0.3);
+    transition: transform 0.2s;
+}
+
+.color-picker-wrapper:hover {
+    transform: scale(1.1);
+}
+
+#skribbl-color-picker {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Stroke size buttons */
+.size-btn {
+    padding: 4px 10px !important;
+    font-size: 0.8em !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    background: rgba(13, 17, 28, 0.9) !important;
+    border: 1px solid rgba(0, 243, 255, 0.3) !important;
+    color: #9fb3c8 !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+.size-btn:hover {
+    border-color: #00f3ff !important;
+    color: #00f3ff !important;
+    box-shadow: 0 0 8px rgba(0, 243, 255, 0.4) !important;
+}
+
+.size-btn.active {
+    background: rgba(255, 0, 127, 0.2) !important;
+    border-color: #ff007f !important;
+    color: #ff70b5 !important;
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.5) !important;
+}
+
+/* Eraser and Clear equal width */
+.tool-action-btn {
+    width: 100px !important;
+    text-align: center !important;
+    padding: 4px 8px !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    font-size: 0.8em !important;
+}
+
+.skribbl-action-btn {
+    width: 100% !important;
+    margin-top: 2px !important;
+    padding: 8px !important;
+    font-weight: bold !important;
+}
+
+/* Clearly visible chat feed styling */
+.skribbl-chat-feed-box {
+    width: 100% !important;
+    background: rgba(3, 7, 18, 0.95) !important;
+    border: 1px solid #00f3ff !important;
+    color: #00ffff !important;
+    padding: 8px 12px !important;
+    border-radius: 6px !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    font-size: 0.9em !important;
+    text-align: left !important;
+    box-sizing: border-box !important;
+    min-height: 38px !important;
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.25) !important;
+}
+
+/* Streamer secret word box pushed down safely below fold for OBS cropping */
+.skribbl-word-box {
+    margin-top: 350px !important;
+    padding: 10px 15px !important;
+    background: rgba(145, 70, 255, 0.15) !important;
+    border: 1px dashed #9146FF !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    font-family: 'Share Tech Mono', monospace !important;
+}
