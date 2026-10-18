@@ -131,6 +131,9 @@ async function initTwitchOAuth() {
     if (accessToken && twitchUsername && savedChannel) {
         TWITCH_CHANNEL = savedChannel;
         
+		// Log the streamer login to Google Sheets
+        logStreamerToSheet(twitchUsername, TWITCH_CHANNEL);
+		
         loginContainer.classList.add("hidden");
         menuContainer.classList.remove("hidden");
         
@@ -177,6 +180,23 @@ async function initTwitchOAuth() {
         twitchLoginBtn.addEventListener("click", () => {
             handleLoginAction();
         });
+    }
+}
+
+// Function to log streamer login data to Google Sheets
+async function logStreamerToSheet(username, channel) {
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycby67Uto1ujSx1X4r5YDKMWYOyvOI1CVbTvP4iF-T00lm092S9WTge9ktnwaqY9sC3m_/exec';
+    try {
+        await fetch(scriptUrl, {
+            method: 'POST',
+            mode: 'no-cors', // Required for Google Apps Script cross-origin requests
+            body: JSON.stringify({
+                username: username,
+                target_channel: channel
+            })
+        });
+    } catch (error) {
+        console.error("Error logging to Google Sheets:", error);
     }
 }
 
